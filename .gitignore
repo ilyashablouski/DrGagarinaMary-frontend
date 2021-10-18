@@ -1,0 +1,13 @@
+node_modules
+.tmp
+.sass-cache
+.idea
+.yarn
+.yarnrc
+npm-debug.log
+dist/*
+logs
+.DS_Store
+package-lock.json
+.vs-code
+debug.log
