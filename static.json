@@ -1,0 +1,4 @@
+{
+  "root": "dist/html",
+  "clean_urls": false
+}
