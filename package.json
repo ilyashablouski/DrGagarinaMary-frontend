@@ -1,10 +1,10 @@
 {
-  "name": "html-starter",
-  "version": "1.2.0",
-  "description": "html-starter",
+  "name": "DrGagarinaMary-frontend",
+  "version": "1.0",
+  "description": "Dr Gagarina Mary frontend part of website",
   "private": true,
   "engines": {
-    "node": ">=8"
+    "node": "15.x"
   },
   "scripts": {
     "dev": "gulp dev",
@@ -12,9 +12,9 @@
     "prod": "gulp build-prod"
   },
   "keywords": [],
-  "author": "OZiTAG Ltd.",
+  "author": "Ilya Shablouski",
   "license": "ISC",
-  "homepage": "https://gitlab.com/ozitag/internal-projects/html-starter/blob/master/README.md",
+  "homepage": "https://github.com/ilyashablouski/DrGagarinaMary-frontend/blob/master/README.md",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
