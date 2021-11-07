@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "prod": "gulp build-prod",
-    "postinstall" : "gulp build"
+    "prod": "gulp build-prod"
   },
   "keywords": [],
   "author": "Ilya Shablouski",
@@ -44,7 +43,6 @@
     "gulp-trim": "^1.0.2",
     "gulp-webp": "^4.0.1",
     "gulp.spritesmith": "^6.12.1",
-    "http-server": "^14.0.0",
     "jquery": "^3.6.0",
     "merge-stream": "^2.0.0",
     "node-sass-tilde-importer": "^1.0.2",
