@@ -1,1 +1,1 @@
-web: http-server dist/html
+web: http-server
