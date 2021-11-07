@@ -8,8 +8,9 @@
   },
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build && http-server -o dist/html",
-    "prod": "gulp build-prod"
+    "build": "gulp build",
+    "prod": "gulp build-prod",
+    "postinstall" : "gulp build"
   },
   "keywords": [],
   "author": "Ilya Shablouski",

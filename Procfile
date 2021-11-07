@@ -1,1 +1,1 @@
-web: yarn build
+web: http-server -o dist/html
