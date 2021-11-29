@@ -9,8 +9,10 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "prod": "gulp build-prod"
+    "prod": "gulp build-prod",
+    "deploy": "gh-pages -d [dist]"
   },
+  "home": "https://ilyashablouski.github.io/DrGagarinaMary-frontend/",
   "keywords": [],
   "author": "Ilya Shablouski",
   "license": "ISC",
@@ -22,6 +24,7 @@
     "browser-sync": "^2.27.5",
     "dart-sass": "^1.24.0",
     "del": "^5.1.0",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-cheerio": "^0.6.3",

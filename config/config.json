@@ -2,7 +2,7 @@
   "appName": "APP_NAME",
   "siteName": "OZiTAG Build Template",
   "siteUrl": "#",
-  "metaPath": ".meta",
+  "metaPath": "meta",
   "sourcePath": "app",
   "destPath": "dist",
   "tmpPath": ".tmp",

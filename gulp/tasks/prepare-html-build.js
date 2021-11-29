@@ -75,8 +75,8 @@ module.exports = () => {
 
     // Сортируем полученный массив элементов в соотсветствии с порядком, заданным в мета-изображениях
     html.sort((a,b) => {
-      let tempA = a.substring(a.lastIndexOf('.meta/') + 6, a.lastIndexOf('_'));
-      let tempB = b.substring(b.lastIndexOf('.meta/') + 6, b.lastIndexOf('_'));
+      let tempA = a.substring(a.lastIndexOf('meta/') + 6, a.lastIndexOf('_'));
+      let tempB = b.substring(b.lastIndexOf('meta/') + 6, b.lastIndexOf('_'));
 
       tempA.charAt(0) === '0'? tempA = tempA.slice(1) : tempA;
       tempB.charAt(0) === '0'? tempB = tempB.slice(1) : tempB;
