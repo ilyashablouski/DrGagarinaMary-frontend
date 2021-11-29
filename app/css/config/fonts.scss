@@ -1,1 +1,15 @@
-$baseFontName: 'Base font';
+$baseFontName: var(--primary-font);
+
+:root {
+  --menu-font: Jost;
+  --menu-font-weight: 500;
+  --menu-font-size: 14px;
+  --heading-font: Old Standard TT;
+  --heading-font-weight: 400;
+  --button-font: Jost;
+  --button-font-weight: 500;
+  --button-font-size: 14px;
+  --primary-font: Jost;
+  --primary-font-weight: 400;
+  --primary-font-size: 16px;
+}
