@@ -9,77 +9,73 @@
   <title>{{ page-title }}</title>
   <meta name="description" content="{{ page-description }}">
 
-  {{> core/head-theme-color color="#DD6900"}}
-  <meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">
+  {{> core/head-theme-color color="#FFFFFF"}}
+  <!--  TODO: Config favicons-->
+  <!--  <meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">-->
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" crossorigin="use-credentials">
-  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#DD6900">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ page-url }}" />
-  <meta property="og:title" content="{{ page-title }}" />
-  <meta property="og:description" content="{{ page-description }}" />
-  <meta property="og:image" content="{{ page-image }}" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="{{ page-image-alt }}" />
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/images/favicon/apple-touch-icon-57x57.png" />-->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="114x114"-->
+  <!--        href="../assets/images/favicon/apple-touch-icon-114x114.png" />-->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/images/favicon/apple-touch-icon-72x72.png" />-->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"-->
+  <!--        href="../assets/images/favicon/apple-touch-icon-144x144.png" />-->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/images/favicon/apple-touch-icon-60x60.png" />-->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="120x120"-->
+  <!--        href="../assets/images/favicon/apple-touch-icon-120x120.png" />-->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/images/favicon/apple-touch-icon-76x76.png" />-->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="152x152"-->
+  <!--        href="../assets/images/favicon/apple-touch-icon-152x152.png" />-->
+  <!--  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-196x196.png" sizes="196x196" />-->
+  <!--  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-96x96.png" sizes="96x96" />-->
+  <!--  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />-->
+  <!--  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />-->
+  <!--  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-128.png" sizes="128x128" />-->
+  <!--  <meta name="application-name" content="&nbsp;" />-->
+  <!--  <meta name="msapplication-TileColor" content="#FFFFFF" />-->
+  <!--  <meta name="msapplication-TileImage" content="../assets/images/favicon/mstile-144x144.png" />-->
+  <!--  <meta name="msapplication-square70x70logo" content="../assets/images/favicon/mstile-70x70.png" />-->
+  <!--  <meta name="msapplication-square150x150logo" content="../assets/images/favicon/mstile-150x150.png" />-->
+  <!--  <meta name="msapplication-wide310x150logo" content="../assets/images/favicon/mstile-310x150.png" />-->
+  <!--  <meta name="msapplication-square310x310logo" content="../assets/images/favicon/mstile-310x310.png" />-->
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:creator" content="">
-  <meta name="twitter:title" content="{{ page-title }}">
-  <meta name="twitter:description" content="{{ page-description }}">
-  <meta name="twitter:image" content="{{ page-image }}">
+
+  <!--  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" crossorigin="use-credentials">-->
+  <!--  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#DD6900">-->
+
 
   <link rel="canonical" href="{{ page-url }}">
+
+  <!--  TODO: Config preload for fonts-->
+  <!--  <link rel="preload" href="/assets/fonts/CiscoSans/Regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <!--  <link rel="preload" href="/assets/fonts/CiscoSans/Bold.woff2" as="font" type="font/woff2" crossorigin>-->
+
+  <link rel="stylesheet" href="../assets/fonts/fonts.css?v={{cache}}">
+
   <link rel="stylesheet" href="../css/main.css?v={{cache}}">
 
   {{#if ui-kit}}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
   {{/if}}
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "WebPage",
-      "name": "{{ page-title }}",
-      "description": "{{ page-description }}",
-      "publisher": {
-        "@type": "Organization",
-        "name": "OZiTAG",
-        "url": "https://ozitag.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": [
-            "https://ozitag.com/logo.png"
-          ]
-        }
-      },
-      "datePublished": "{{ page-published-date }}",
-      "dateModified": "{{ page-modified-date }}",
-      "image": [
-        "{{ page-image-16-9 }}"
-      ],
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ page-url }}"
-      }
-    }
-  </script>
 </head>
 
 <body class="page {{page-mod}} {{page-class}}">
 <div class="{{#if ui-kit}}uikit-preloader js-uikit-preloader{{else}}preloader js-preloader{{/if}}">
   {{#if ui-kit}}
     <div class="uikit-preloader-animation">
-      <div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   {{/if}}
 </div>
 <div class="page__inner">
+

@@ -1,6 +1,16 @@
 <header class="header page__header">
-  <div class="container">
-    <h2>HEADER</h2>
+  <div class='header__wrapper'>
+    <div class='header__left'>
+      <a href='home.html' class='header__logo'>
+        {{>components/image img="logo" ext='png' no-2x=true}}
+      </a>
+    </div>
+    <div class='header__center'>
+      {{> blocks/header/header-menu home=home}}
+    </div>
+    <div class='header__right'>
+      {{> ui/btn outline=true btn-mode='wide-letters' href='home.html' label='Записаться' }}
+    </div>
   </div>
 </header>
 

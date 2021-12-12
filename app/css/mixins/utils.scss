@@ -97,8 +97,8 @@
   transform: rotate($deg);
 }
 
-@mixin transition($duration: 300ms, $property: all,$fn: ease-in-out) {
-  transition: $duration $property $fn;
+@mixin transition($duration: 200ms, $property: all, $fn: ease-in-out) {
+  transition: $property $duration $fn;
 }
 
 @mixin triangle($width, $dir, $color) {
@@ -304,7 +304,7 @@
   }
 }
 
-@mixin textLinesEllipsis($lines){
+@mixin textLinesEllipsis($lines) {
   display: -webkit-box;
   -webkit-line-clamp: $lines;
   -webkit-box-orient: vertical;

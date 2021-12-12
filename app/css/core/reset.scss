@@ -94,19 +94,11 @@ input, select, textarea, button {
 }
 
 body {
-  font-family: $baseFontName, -apple-system,
-  'BlickMacSystemFont',
-  'Segoe UI',
-  'Roboto',
-  'Oxygen',
-  'Ubuntu',
-  'Cantarell',
-  'Fira Sans',
-  'Droid Sans',
-  'Helvetica Neue',
-  sans-serif;
+  font-family: $baseFontName, -apple-system, sans-serif;
   font-size: 16px;
-  color: #000;
+  font-weight: 400;
+  line-height: 1.8;
+  color: $color-grey;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
