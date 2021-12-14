@@ -1,3 +1,145 @@
 .footer {
+  display: block;
+  width: 100%;
+  background: $color-primary;
 
+  &__wrapper {
+    padding: 118px 0;
+  }
+
+  &__logo {
+    text-align: center;
+
+    &-link {
+      display: inline-block;
+      width: 145px;
+      height: 145px;
+    }
+  }
+
+  &__divider {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      max-width: 450px;
+      height: 1px;
+      background: $color-white;
+    }
+  }
+
+  &__row {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    padding: 0 20px;
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
+  }
+
+  &__item {
+    margin-top: 35px;
+    color: $color-grey-light;
+    line-height: 2em;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $color-white;
+    font-family: var(--heading-font);
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+
+  &__email {
+    &-link {
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__phone {
+    &-link {
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__schedule {
+    width: 65%;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-day {
+      flex: 0 0 50%;
+      max-width: 50%;
+      white-space: nowrap;
+    }
+
+    &-hours {
+      flex: 0 0 50%;
+      max-width: 50%;
+      white-space: nowrap;
+      text-align: right;
+    }
+  }
+
+  &__socials {
+    margin-top: 15px;
+    margin-left: -3px;
+    display: flex;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      color: $color-white;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+
+    &:not(:last-child):after {
+      margin-top: -2px;
+      content: '|';
+      padding: 0 12px;
+      font-size: 21px;
+    }
+  }
+
+  &__copyright {
+    padding: 19px 0;
+    background: $color-brown-dark;
+    color: $color-grey-light;
+    text-align: center;
+
+    &-link {
+      color: $color-white;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
 }

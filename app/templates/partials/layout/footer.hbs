@@ -1,8 +1,84 @@
 </main>
 
 <footer class="footer page__footer">
-  <div class="container">
-    <h2>FOOTER</h2>
+  <div class="footer__wrapper">
+    <div class="container">
+      <div class="footer__logo">
+        <a href="home.html" class="footer__logo-link">
+          {{>components/image img="logo" ext='png' no-2x=true}}
+        </a>
+      </div>
+
+      <i class="footer__divider"></i>
+
+      <div class="footer__row">
+        <div class="footer__col">
+          <span class="footer__title">Про нас</span>
+          <div class="footer__item">
+            <p class="footer__text">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+              no
+              sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <div class="footer__socials">
+              <div class="footer__social">
+                <a href="#" class="footer__social-link">{{> ui/svg name="facebook"}}</a>
+              </div>
+
+              <div class="footer__social">
+                <a href="#" class="footer__social-link">{{> ui/svg name="instagram"}}</a>
+              </div>
+
+              <div class="footer__social">
+                <a href="#" class="footer__social-link">{{> ui/svg name="linkedin"}}</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__title">Связаться с нами</span>
+          <div class="footer__item">
+            <p class="footer__text">6 West Broadway, New York,<br>NY 10012, USA</p>
+            <div class="footer__email">
+              <a href="mailto:mary.potaneiko@mail.ru" class="footer__email-link">mary.potaneiko@mail.ru</a>
+            </div>
+            <div class="footer__phone">
+              <a href="tel:+375293402969" class="footer__phone-link">+375(29)340-29-69</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__title">Рабочие часы</span>
+          <div class="footer__item">
+            <ul class="footer__schedule">
+              <li class="footer__schedule-item">
+                <span class="footer__schedule-day">Working Days</span>
+                <span class="footer__schedule-hours">9AM - 9PM</span>
+              </li>
+              <li class="footer__schedule-item">
+                <span class="footer__schedule-day">Saturday</span>
+                <span class="footer__schedule-hours">10AM - 8PM</span>
+              </li>
+              <li class="footer__schedule-item">
+                <span class="footer__schedule-day">Sunday</span>
+                <span class="footer__schedule-hours">Closed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__copyright">
+    <div class="container">
+    <span class="footer__copyright-text">© 2022
+      <a href="#" class="footer__copyright-link" target="_blank" rel="nofollow
+     noopener noreferrer"> SFA Mary Gagarina</a>, All Rights Reserved
+    </span>
+    </div>
   </div>
 </footer>
 
