@@ -1,0 +1,97 @@
+.hero {
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      min-height: 880px;
+      width: 100vw;
+      object-fit: cover;
+    }
+
+    &:before {
+      @include fill;
+      content: '';
+      display: block;
+      background: $color-black;
+      opacity: .4;
+    }
+  }
+
+  &__wrapper {
+    padding: 260px 0;
+    text-align: center;
+  }
+
+  &__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+
+  &__heading {
+    margin-top: 30px;
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 70px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.5em;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+
+  &__contacts {
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    background: $color-primary;
+
+    &-item {
+      padding: 0 25px;
+    }
+
+    &-text {
+      position: relative;
+      padding-left: 23px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #FFFFFF;
+
+      &:before {
+        content: '';
+        left: 0;
+        @include align(false, true);
+        @include transition;
+      }
+
+      &--mail {
+        &:before {
+          @include sprite('envelope-gold');
+        }
+      }
+
+      &--phone {
+        &:before {
+          @include sprite('phone-gold');
+        }
+      }
+
+      &--marker {
+        &:before {
+          @include sprite('marker-gold');
+        }
+      }
+    }
+  }
+
+}

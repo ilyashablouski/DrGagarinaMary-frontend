@@ -56,11 +56,31 @@
   }
 
   &--large {
-    padding: 20px 25px;
-    font-size: 20px;
+    padding: 23px 35px;
   }
 
   &--wide-letters {
     letter-spacing: .25em;
+  }
+
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+
+    .icon {
+      margin-left: 10px;
+
+      &--arrow-right {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &--gold {
+    background: $color-gold;
+
+    &:hover {
+      background: $color-primary;
+    }
   }
 }

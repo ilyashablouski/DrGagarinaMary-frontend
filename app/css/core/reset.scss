@@ -8,6 +8,10 @@
   &:after {
     box-sizing: border-box;
   }
+
+  &::selection {
+    background: $color-secondary;
+  }
 }
 
 html, body {
