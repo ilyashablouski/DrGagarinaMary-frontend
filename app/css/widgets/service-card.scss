@@ -1,0 +1,72 @@
+.service-card {
+  padding-top: 134.8%;
+  position: relative;
+
+  &:hover {
+    .service-card__banner-title {
+      color: $color-secondary;
+    }
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__link {
+    @include fill();
+    z-index: 1;
+  }
+
+  &__image {
+    @include fill();
+    overflow: hidden;
+
+    img {
+      @include fill();
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      @include transition(1.5s, all, cubic-bezier(0, 0, .2, 1));
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    padding: 25px 35px;
+    width: 100%;
+    max-width: 345px;
+    background: $color-white;
+
+    &-title {
+      display: block;
+      font-style: italic;
+      white-space: nowrap;
+      @include transition(.25s, all, cubic-bezier(.645, .045, .355, 1));
+    }
+
+    &-text {
+      margin-top: 5px;
+      display: block;
+      font-size: 24px;
+      font-family: var(--heading-font);
+      font-weight: var(--heading-font-weight);
+      line-height: 1.4;
+      text-transform: uppercase;
+      color: $color-primary;
+      white-space: nowrap;
+    }
+
+    &--blue {
+      background: #f0f7fb;
+    }
+
+    &--orange {
+      background: #fff9f6;
+    }
+
+
+  }
+
+}

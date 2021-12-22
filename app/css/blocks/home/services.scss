@@ -1,0 +1,33 @@
+.services {
+  padding-top: 120px;
+  background: #FFFFFF;
+
+  &__heading {
+    max-width: 800px;
+
+    &-title {
+      font-family: var(--heading-font);
+      font-weight: var(--heading-font-weight);
+      font-size: 40px;
+      line-height: 1.5em;
+      text-transform: uppercase;
+      color: $color-primary;
+    }
+
+    &-text {
+      margin-top: 15px;
+    }
+  }
+
+  &__row {
+    margin-top: 115px;
+    margin-left: -$desktopGutter;
+    margin-right: -$desktopGutter;
+    display: flex;
+  }
+
+  &__cell {
+    padding: 0 $desktopGutter;
+    width: 100%;
+  }
+}
