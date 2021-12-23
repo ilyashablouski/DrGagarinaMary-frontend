@@ -1,0 +1,59 @@
+.companies {
+  padding: 110px 0;
+  background: #FFFFFF;
+
+  &__logos {
+    margin: 0 -$desktopGutter;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__logo {
+    position: relative;
+    margin: 0 $desktopGutter;
+    overflow: hidden;
+
+    &-link {
+      &:hover {
+        picture {
+          &:first-child {
+            img {
+              transform: translateY(100%);
+            }
+          }
+
+          &:last-child {
+            img {
+              transform: translate(-50%, 0);
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      min-height: 150px;
+      object-fit: contain;
+      width: 100%;
+      transition: transform .4s ease;
+      max-width: 150px;
+    }
+
+    picture {
+      &:first-child {
+        img {
+          opacity: .6;
+        }
+      }
+
+      &:last-child {
+        img {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -100%);
+        }
+      }
+    }
+  }
+}
