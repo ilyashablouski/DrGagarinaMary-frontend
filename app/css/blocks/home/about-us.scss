@@ -1,0 +1,61 @@
+.about-us {
+  padding: 120px 0;
+  background: $color-creamy;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__left {
+    position: relative;
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  &__right {
+    margin-left: 90px;
+    margin-top: 50px;
+    flex: 1 1 420px;
+    max-width: 420px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: $color-gold-dark;
+  }
+
+  &__heading {
+    margin-top: 20px;
+    display: block;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    line-height: 1.5em;
+    font-size: 40px;
+    color: $color-primary;
+  }
+
+  &__text {
+    margin-top: 15px;
+  }
+
+  &__text-spinner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-10%, 10%);
+    text-transform: uppercase;
+    display: inline-flex;
+
+    svg {
+      animation: 3s loop-rotate linear infinite;
+      animation-duration: 8s;
+    }
+
+    text {
+      font: initial;
+      font-size: 12px;
+    }
+  }
+}
