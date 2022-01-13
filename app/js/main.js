@@ -31,5 +31,7 @@ import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
 import './src/widgets/inputs/datepicker';
 
+import './src/widgets/carousel';
+
 import './src/app';
 

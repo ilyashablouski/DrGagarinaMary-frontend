@@ -1,0 +1,19 @@
+.services-carousel {
+  padding-top: 120px;
+  background: #FFFFFF;
+
+  &__heading {
+    display: block;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    font-size: 40px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+
+  .carousel__wrapper {
+    display: flex;
+  }
+}

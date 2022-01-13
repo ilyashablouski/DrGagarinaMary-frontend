@@ -1,0 +1,33 @@
+{{#> modules/carousel/_component background=true title='Галерея работ' tabs=true}}
+  {{#times  4}}
+    <div class="carousel__slide swiper-slide js-carousel__item" data-filters="filter-1">
+      {{> components/image img='home/carousel/nails' ext="jpg" no-2x=true}}
+    </div>
+  {{/times}}
+
+  {{#times  4}}
+    <div class="carousel__slide swiper-slide js-carousel__item" data-filters="filter-2">
+      {{> components/image img='home/carousel/makeup' ext="jpg" no-2x=true}}
+    </div>
+  {{/times}}
+
+  {{#times  4}}
+    <div class="carousel__slide swiper-slide js-carousel__item" data-filters="filter-3">
+      {{> components/image img='home/carousel/brow' ext="jpg" no-2x=true}}
+    </div>
+  {{/times}}
+
+  {{#times  4}}
+    <div class="carousel__slide swiper-slide js-carousel__item"
+         data-filters="filter-4">
+      {{> components/image img='home/carousel/hair' ext="jpg" no-2x=true}}
+    </div>
+  {{/times}}
+
+  {{#times  4}}
+    <div class="carousel__slide swiper-slide js-carousel__item"
+         data-filters="filter-5">
+      {{> components/image img='home/carousel/coloring' ext="jpg" no-2x=true}}
+    </div>
+  {{/times}}
+{{/modules/carousel/_component}}

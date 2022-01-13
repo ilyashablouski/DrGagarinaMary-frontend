@@ -1,0 +1,108 @@
+.carousel {
+  &__bottom {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__slider {
+    position: relative;
+
+    ._with-pagination & {
+      @include desktop {
+        .swiper-wrapper {
+          padding-bottom: 20px;
+        }
+        .carousel__next, .carousel__prev {
+          margin-top: -20px;
+        }
+      }
+    }
+  }
+
+  &__row {
+    @include reset-slider-container;
+
+    .non-swiper-slide {
+      display: none;
+    }
+
+    .swiper-container.transition {
+      position: relative;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 15px;
+        display: block;
+        background: #fff;
+        z-index: 2;
+      }
+
+      .home-featured--background & {
+        &:before, &:after {
+          display: none;
+        }
+      }
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  &__tabs {
+
+  }
+
+  &__slide {
+    height: auto;
+  }
+
+  &__prev {
+    @include no-desktop {
+      display: none;
+    }
+
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%) translateX(-100%);
+
+    .no-navigation & {
+      display: none;
+    }
+  }
+
+  &__next {
+    @include no-desktop {
+      display: none;
+    }
+
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%) translateX(100%);
+
+    .no-navigation & {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    @include align(true, false);
+
+    @include tablet-and-mobile {
+      display: none;
+    }
+  }
+}
