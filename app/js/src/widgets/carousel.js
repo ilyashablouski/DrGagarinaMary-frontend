@@ -48,57 +48,63 @@ class Carousel extends Widget {
 
   initSwiper() {
     // If Carousel with scrollbar
-    if (document.querySelector('.swiper-scrollbar')) {
-      this.swiper = new Swiper(this.$slider, {
-        slidesPerView: 'auto',
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          draggable: true,
-        },
-        grabCursor: true,
-        spaceBetween: 0,
-        preventClicks: false,
-        preventClicksPropagation: false,
-        navigation: {
-          prevEl: this.$navPrev,
-          nextEl: this.$navNext,
-        },
-        on: {
-          slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
-          slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
-        },
-      });
-    } else {
+    // if (document.querySelector('.swiper-scrollbar')) {
+    //   this.swiper = new Swiper(this.$slider, {
+    //     slidesPerView: 'auto',
+    //     scrollbar: {
+    //       el: '.swiper-scrollbar',
+    //       draggable: true,
+    //     },
+    //     grabCursor: true,
+    //     spaceBetween: 0,
+    //     preventClicks: false,
+    //     preventClicksPropagation: false,
+    //     navigation: {
+    //       prevEl: this.$navPrev,
+    //       nextEl: this.$navNext,
+    //     },
+    //     on: {
+    //       slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
+    //       slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
+    //     },
+    //   });
+    // } else {
 
-      if (this.isFull) {
-        this.$pagination = document.createElement('div');
-        this.$pagination.classList.add('swiper-pagination');
-        this.$slider.append(this.$pagination);
-        this.$node.classList.add('_with-pagination');
-      }
-
-      this.swiper = new Swiper(this.$slider, {
-        slidesPerView: this.isFull ? 1 : (this.isBig ? 2 : 4),
-        spaceBetween: 0,
-        breakpoints: {
-          1440: {
-            spaceBetween: 13.25,
-          },
-        },
-        navigation: {
-          prevEl: this.$navPrev,
-          nextEl: this.$navNext,
-        },
-        pagination: this.isFull ? {
-          el: this.$pagination,
-          clickable: true,
-        } : false,
-        on: {
-          slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
-          slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
-        },
-      });
+    if (this.isFull) {
+      this.$pagination = document.createElement('div');
+      this.$pagination.classList.add('swiper-pagination');
+      this.$slider.append(this.$pagination);
+      this.$node.classList.add('_with-pagination');
     }
+
+    this.swiper = new Swiper(this.$slider, {
+      slidesPerView: 'auto',
+      // centeredSlides: true,
+      spaceBetween: 90,
+      loop: true,
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 3,
+        slideShadows: false,
+      },
+      // navigation: {
+      //   prevEl: this.$navPrev,
+      //   nextEl: this.$navNext,
+      // },
+      // pagination: this.isFull ? {
+      //   el: this.$pagination,
+      //   clickable: true,
+      // } : false,
+      // on: {
+      //   slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
+      //   slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
+      // },
+    });
+    // TODO:Restore from comment if needed
+    // }
   }
 
   events() {
@@ -170,10 +176,6 @@ class Carousel extends Widget {
         found = true;
       }
     });
-
-    if (!found) {
-      this.setActiveFilter('*');
-    }
   }
 
 
