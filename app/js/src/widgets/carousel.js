@@ -4,15 +4,13 @@ class Carousel extends Widget {
 
     this.swiper = null;
     this.activeFilter = null;
-    this.$pagination = null;
-
     this.$slider = this.queryElement('.slider');
     this.$slides = this.queryElements('.item');
-    this.$navPrev = this.queryElement('.prev');
-    this.$navNext = this.queryElement('.next');
+    // this.$navPrev = this.queryElement('.prev');
+    // this.$navNext = this.queryElement('.next');
     this.$tabs = this.queryElements('.tab');
-    this.isBig = !!this.$node.dataset.carouselBig;
-    this.isFull = !!this.$node.dataset.carouselFull;
+    // this.isBig = !!this.$node.dataset.carouselBig;
+    this.withPagination = !!this.$node.dataset.carouselWithPagination;
 
     this.onLayoutChange = this.onLayoutChange.bind(this);
 
@@ -70,16 +68,12 @@ class Carousel extends Widget {
     //   });
     // } else {
 
-    if (this.isFull) {
-      this.$pagination = document.createElement('div');
-      this.$pagination.classList.add('swiper-pagination');
-      this.$slider.append(this.$pagination);
-      this.$node.classList.add('_with-pagination');
-    }
-
     this.swiper = new Swiper(this.$slider, {
       slidesPerView: 'auto',
-      // centeredSlides: true,
+      pagination: this.withPagination ? {
+        el: '.swiper-pagination',
+        clickable: true,
+      } : false,
       spaceBetween: 90,
       loop: true,
       effect: 'coverflow',
@@ -90,21 +84,7 @@ class Carousel extends Widget {
         modifier: 3,
         slideShadows: false,
       },
-      // navigation: {
-      //   prevEl: this.$navPrev,
-      //   nextEl: this.$navNext,
-      // },
-      // pagination: this.isFull ? {
-      //   el: this.$pagination,
-      //   clickable: true,
-      // } : false,
-      // on: {
-      //   slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
-      //   slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
-      // },
     });
-    // TODO:Restore from comment if needed
-    // }
   }
 
   events() {
@@ -156,10 +136,6 @@ class Carousel extends Widget {
         this.hideNode(node);
       }
     });
-
-    const itemsCount = this.isFull ? 1 : (this.isBig ? 2 : 4);
-
-    this.$node.classList.toggle('no-navigation', visibleCount <= itemsCount);
 
     if (this.swiper) {
       this.swiper.destroy(true, true);
