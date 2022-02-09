@@ -1,18 +1,43 @@
 .header-menu {
+  @include tablet-and-mobile {
+    position: fixed;
+    left: 0;
+    top: 100px;
+    padding: 0 $tabletGutter;
+    width: 100%;
+    background: #FFFFFF;
+  }
+
   &__nav {
     display: flex;
+
+    @include tablet-and-mobile {
+      display: block;
+    }
   }
 
   &__item {
     &:not(:first-child) {
       margin-left: 50px;
+
+      @include tablet-and-mobile {
+        margin-left: 0;
+        border-top: 1px solid $color-primary;
+      }
     }
 
     &-link {
       position: relative;
+      display: inline-block;
       font-size: 14px;
       font-weight: 500;
       text-transform: uppercase;
+
+      @include tablet-and-mobile {
+        padding: 10px 0;
+        display: block;
+      }
+
 
       &:before {
         content: '';
@@ -29,10 +54,35 @@
 
       &:hover:before {
         transform: scale(1, 1);
+
+        @include tablet-and-mobile {
+          transform: scale(0, 0);
+        }
+      }
+
+      &.active {
+        @include tablet-and-mobile {
+          color: $color-secondary;
+        }
       }
 
       &.active:before {
         transform: scale(1, 1);
+
+        @include tablet-and-mobile {
+          transform: scale(0, 0);
+        }
+      }
+    }
+
+    &-icon {
+      display: none;
+
+      @include tablet-and-mobile {
+        position: absolute;
+        @include align(false, true);
+        right: 0;
+        display: inline-flex;
       }
     }
   }
