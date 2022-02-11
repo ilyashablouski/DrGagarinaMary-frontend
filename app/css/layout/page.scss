@@ -21,4 +21,25 @@
   &__footer {
     flex-shrink: 0;
   }
+
+  &:before {
+      content: '';
+      @include fill;
+      background: transparent;
+      backdrop-filter: blur(0);
+      z-index: 2;
+      @include transition(.2s);
+      visibility: hidden;
+      will-change: backdrop-filter;
+  }
+
+  &.no-scrollbar {
+    overflow: hidden;
+
+    &:before {
+      background: rgba(0.10, 0.09, 0.08, 0.5);
+      backdrop-filter: blur(2px);
+      visibility: visible;
+    }
+  }
 }

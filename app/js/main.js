@@ -7,6 +7,8 @@ import './src/core/uikit/uikit-copy-to-clipboard';
 import './src/core/uikit/uikit-scroll-to';
 import './src/core/uikit/uikit-accord';
 
+import './src/modules/header-burger'
+
 import './src/utils/helpers';
 import './src/utils/device';
 import './src/utils/events';

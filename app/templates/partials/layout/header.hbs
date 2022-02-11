@@ -7,7 +7,7 @@
     </div>
     <div class="header__center">
       {{> blocks/header/header-menu home=home}}
-      <button class="header__burger js-header__burger">
+      <button class="header__burger js-header__open">
         <span class='header__burger-line'></span>
         <span class='header__burger-line'></span>
       </button>
@@ -15,6 +15,11 @@
     <div class="header__right">
       {{> ui/btn outline=true btn-mode='wide-letters' href='home.html' label='Записаться' }}
     </div>
+  </div>
+  <div class="header__aside js-header__pushed">
+    <button class="header__close js-header__close">
+      <i class="header__close-icon">{{> ui/svg name="close-btn"}}</i>
+    </button>
   </div>
 </header>
 
