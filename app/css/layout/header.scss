@@ -1,8 +1,8 @@
 .header {
-  padding: 0 60px;
+  padding: 0 70px;
   display: flex;
   align-items: center;
-  height: 100px;
+  min-height: 100px;
   width: 100%;
   background: $color-white;
   color: $color-dark;
@@ -10,12 +10,20 @@
 
   @include tablet-and-mobile {
     position: fixed;
+    z-index: 2;
     padding: 0 $tabletGutter;
+    min-height: 75px;
   }
 
   &.opened {
-    .header__aside {
+    .aside {
       transform: translateX(0);
+    }
+
+    @include tablet-and-mobile {
+      .header-menu {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -28,7 +36,15 @@
 
   &__left {
     @include tablet-and-mobile {
-      margin: 0 auto;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      min-height: 75px;
+      width: 100%;
+      background: #FFFFFF;
     }
   }
 
@@ -55,6 +71,12 @@
     display: block;
     width: 80px;
     height: 80px;
+
+    @include tablet-and-mobile {
+      margin: 0 auto;
+      width: 65px;
+      height: 65px;
+    }
   }
 
   &__burger {
@@ -63,18 +85,19 @@
     width: 30px;
     height: 12px;
 
+    @include tablet-and-mobile {
+      @include align(false, true);
+      margin-left: 0;
+      left: 0;
+      z-index: 1;
+    }
+
     &:hover {
       color: $color-secondary;
 
       .header__burger-line:last-child {
         width: 30px;
       }
-    }
-
-    @include tablet-and-mobile {
-      @include align(false, true);
-      margin-left: 0;
-      left: 0;
     }
 
     &-line {
@@ -93,29 +116,6 @@
         bottom: 0;
         width: 15px;
       }
-    }
-  }
-
-  &__aside {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 20vw;
-    height: 100vh;
-    z-index: 3;
-    background: #FFFFFF;
-    transform: translateX(100%);
-    transition: transform .6s cubic-bezier(.77,0,.175,1);
-    will-change: transform;
-  }
-
-  &__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    &-icon {
-
     }
   }
 }

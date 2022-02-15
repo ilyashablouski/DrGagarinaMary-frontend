@@ -1,0 +1,44 @@
+<div class="aside js-header__aside">
+  <button class="aside__close js-header__close">
+    <i class="aside__close-icon">{{> ui/svg name="close-btn"}}</i>
+  </button>
+
+  <div class="aside__content">
+    <a href="home.html" class="aside__logo">
+      {{>components/image img="logo" ext='png' no-2x=true}}
+    </a>
+
+    <i class="aside__divider"></i>
+
+    <ul class="aside__schedule">
+      <li class="aside__schedule-item">
+        <span class="aside__schedule-day">Working Days</span>
+        <span class="aside__schedule-hours">9AM - 9PM</span>
+      </li>
+      <li class="aside__schedule-item">
+        <span class="aside__schedule-day">Saturday</span>
+        <span class="aside__schedule-hours">10AM - 8PM</span>
+      </li>
+      <li class="aside__schedule-item">
+        <span class="aside__schedule-day">Sunday</span>
+        <span class="aside__schedule-hours">Closed</span>
+      </li>
+    </ul>
+
+    <i class="aside__divider"></i>
+
+    <div class="aside__contacts">
+      <p class="aside__address">6 West Broadway, New York,<br>NY 10012, USA</p>
+      <div class="aside__email">
+        <a href="mailto:mary.potaneiko@mail.ru" class="aside__email-link">mary.potaneiko@mail.ru</a>
+      </div>
+      <div class="aside__phone">
+        <a href="tel:+375293402969" class="aside__phone-link">+375(29)340-29-69</a>
+      </div>
+    </div>
+
+    <div class="aside__socials">
+      {{>  widgets/socials}}
+    </div>
+  </div>
+</div>

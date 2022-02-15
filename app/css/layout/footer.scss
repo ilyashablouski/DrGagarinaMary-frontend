@@ -102,30 +102,7 @@
   &__socials {
     margin-top: 15px;
     margin-left: -3px;
-    display: flex;
-  }
-
-  &__social {
-    display: flex;
-    align-items: center;
-
-    &-link {
-      display: flex;
-      align-items: center;
-      font-size: 30px;
-      color: $color-white;
-
-      &:hover {
-        color: $color-secondary;
-      }
-    }
-
-    &:not(:last-child):after {
-      margin-top: -2px;
-      content: '|';
-      padding: 0 12px;
-      font-size: 21px;
-    }
+    color: $color-white;
   }
 
   &__copyright {

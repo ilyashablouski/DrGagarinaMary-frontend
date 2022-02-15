@@ -1,0 +1,80 @@
+.aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 60px 40px;
+  width: 460px;
+  height: 100vh;
+  z-index: 3;
+  background: #FFFFFF;
+  transform: translateX(100%);
+  transition: transform .6s cubic-bezier(.77, 0, .175, 1);
+  will-change: transform;
+  overflow-y: auto;
+
+  @include tablet-and-mobile {
+    display: none;
+  }
+
+  &__logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+  }
+
+  &__divider {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      height: 1px;
+      background: $color-primary;
+    }
+  }
+
+  &__schedule {
+    margin-top: 45px;
+
+    &-item {
+      display: flex;
+    }
+
+    &-day {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+
+    &-hours {
+      flex: 1 1 50%;
+      max-width: 50%;
+      text-align: right;
+    }
+  }
+
+  &__contacts {
+    margin-top: 45px;
+    line-height: 2em;
+  }
+
+  &__email-link, &__phone-link {
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__socials {
+    margin-top: 15px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 20px;
+  }
+}
