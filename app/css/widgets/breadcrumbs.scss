@@ -1,0 +1,30 @@
+.breadcrumbs {
+  display: flex;
+
+  &__item {
+    position: relative;
+    &:not(:first-child) {
+      margin-left: 10px;
+      padding-left: 16px;
+      &:before {
+        @include align(false);
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        content: '';
+        background: $color-grey;
+      }
+    }
+  }
+
+  &__link {
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__label {
+     color: $color-primary;
+  }
+}

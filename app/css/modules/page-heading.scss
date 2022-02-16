@@ -1,0 +1,19 @@
+.page-heading {
+  padding: 55px 0;
+  background: $color-creamy-light;
+  text-align: center;
+
+  &__title {
+    font-family: var(--heading-font);
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $color-primary;
+  }
+
+  &__breadcrumbs {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+  }
+}
