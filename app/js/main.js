@@ -7,7 +7,8 @@ import './src/core/uikit/uikit-copy-to-clipboard';
 import './src/core/uikit/uikit-scroll-to';
 import './src/core/uikit/uikit-accord';
 
-import './src/modules/header-menu'
+import  './src/modules/header/header'
+import './src/modules/header/header-menu'
 
 import './src/utils/helpers';
 import './src/utils/device';

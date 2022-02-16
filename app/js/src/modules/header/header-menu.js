@@ -1,8 +1,8 @@
 class HeaderMenu extends Widget {
   constructor(node) {
-    super(node, 'js-header-menu');
+    super(node, 'js-header');
 
-    this.burgerBtn = this.queryElement('.open');
+    this.burgerBtn = this.queryElement('.burger');
     this.closeBtn = this.queryElement('.close');
     this.isOpened = false;
 
@@ -17,7 +17,7 @@ class HeaderMenu extends Widget {
     this.burgerBtn.addEventListener('click', this.onShowCloseClick);
     this.closeBtn.addEventListener('click', this.onShowCloseClick);
     document.addEventListener('click', ({ target }) => {
-      if (target.closest('.js-header-menu__aside') || target.closest('.js-header-menu__open')) {
+      if (target.closest('.js-header__aside') || target.closest('.js-header__burger')) {
         return;
       } else {
         this.closeOverlay();
@@ -46,8 +46,4 @@ class HeaderMenu extends Widget {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-header-menu').forEach(element => HeaderMenu.init(element));
-});
-
-window.HeaderBurger = HeaderMenu;
+window.HeaderMenu = HeaderMenu;
