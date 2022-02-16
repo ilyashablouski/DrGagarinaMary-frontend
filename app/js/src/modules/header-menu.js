@@ -1,6 +1,6 @@
-class HeaderBurger extends Widget {
+class HeaderMenu extends Widget {
   constructor(node) {
-    super(node, 'js-header');
+    super(node, 'js-header-menu');
 
     this.burgerBtn = this.queryElement('.open');
     this.closeBtn = this.queryElement('.close');
@@ -17,7 +17,7 @@ class HeaderBurger extends Widget {
     this.burgerBtn.addEventListener('click', this.onShowCloseClick);
     this.closeBtn.addEventListener('click', this.onShowCloseClick);
     document.addEventListener('click', ({ target }) => {
-      if (target.closest('.js-header__aside') || target.closest('.js-header__open')) {
+      if (target.closest('.js-header-menu__aside') || target.closest('.js-header-menu__open')) {
         return;
       } else {
         this.closeOverlay();
@@ -42,12 +42,12 @@ class HeaderBurger extends Widget {
   }
 
   static init(el) {
-    HeaderBurger.el = new HeaderBurger(el);
+    HeaderMenu.el = new HeaderMenu(el);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-header').forEach(element => HeaderBurger.init(element));
+  document.querySelectorAll('.js-header-menu').forEach(element => HeaderMenu.init(element));
 });
 
-window.HeaderBurger = HeaderBurger;
+window.HeaderBurger = HeaderMenu;

@@ -1,22 +1,23 @@
 <nav class="header-menu">
   <ul class="header-menu__nav">
     <li class="header-menu__item">
-      <a href="#" class="header-menu__item-link {{#if home}}active{{/if}}">Главная
+      <a href="home.html" class="header-menu__item-link {{#ifCond active-link 'home'}}active{{/ifCond}}">Главная
         <i class="header-menu__item-icon">{{> ui/svg name="chevron-right"}}</i>
       </a>
 
     </li>
     <li class="header-menu__item">
-      <a href="#" class="header-menu__item-link">Магазин
+      <a href="products.html" class="header-menu__item-link {{#ifCond active-link 'products'}}active{{/ifCond}}">Магазин
         <i class="header-menu__item-icon">{{> ui/svg name="chevron-right"}}</i>
       </a>
-
     </li>
+
     <li class="header-menu__item">
       <a href="#" class="header-menu__item-link">Услуги
         <i class="header-menu__item-icon">{{> ui/svg name="chevron-right"}}</i>
       </a>
     </li>
+
     <li class="header-menu__item">
       <a href="#" class="header-menu__item-link">Ногти
         <i class="header-menu__item-icon">{{> ui/svg name="chevron-right"}}</i>
