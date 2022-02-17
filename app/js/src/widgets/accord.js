@@ -36,16 +36,11 @@ class Accord extends Widget {
     }
   }
 
-  scrollToView() {
-    startScrollTo(this.$node);
-  }
 
   open() {
     this.$node.classList.add('opened');
     this.expand();
     this.trigger('opening');
-
-    setTimeout(() => this.scrollToView(), 300);
   }
 
   close() {

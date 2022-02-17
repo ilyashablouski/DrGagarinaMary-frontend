@@ -1,0 +1,33 @@
+.service-about {
+  &__wrapper {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  &__right {
+    margin-left: 80px;
+    flex: 1 1 calc(50% - 80px);
+    max-width: calc(50% - 80px);
+  }
+
+  &__title {
+    font-family: var(--heading-font);
+    font-size: 40px;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+
+  &__button {
+    margin-top: 50px;
+  }
+}

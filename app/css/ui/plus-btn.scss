@@ -1,0 +1,27 @@
+.plus-btn {
+  position: relative;
+  border-radius: 10px;
+  width: 16px;
+  height: 16px;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 16px;
+    background: $color-primary;
+    border-radius: 5px;
+    transition: transform .32s ease;
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
