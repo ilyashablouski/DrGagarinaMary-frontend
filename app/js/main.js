@@ -7,8 +7,8 @@ import './src/core/uikit/uikit-copy-to-clipboard';
 import './src/core/uikit/uikit-scroll-to';
 import './src/core/uikit/uikit-accord';
 
-import  './src/modules/header/header'
-import './src/modules/header/header-menu'
+import './src/modules/header/header';
+import './src/modules/header/header-menu';
 
 import './src/utils/helpers';
 import './src/utils/device';
@@ -35,6 +35,7 @@ import './src/widgets/inputs/masked-input';
 import './src/widgets/inputs/datepicker';
 
 import './src/widgets/carousel';
+import './src/widgets/map';
 
 import './src/app';
 

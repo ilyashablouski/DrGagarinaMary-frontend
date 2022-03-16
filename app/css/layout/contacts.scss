@@ -1,4 +1,25 @@
 .contacts {
   padding-bottom: 120px;
+  display: flex;
   background: #FFFFFF;
+
+  &__left {
+    flex: 1 1 40%;
+    max-width: 40%;
+  }
+
+
+  &__right {
+    flex: 1 1 60%;
+    max-width: 60%;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    &-container {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

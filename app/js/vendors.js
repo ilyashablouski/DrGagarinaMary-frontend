@@ -8,7 +8,7 @@ import svgPolyfill from 'svg4everybody';
 import jquery from 'jquery';
 import swiper from 'swiper';
 import SwiperCore, { Pagination, EffectCoverflow } from 'swiper/core';
-
+import ymaps from 'ymaps';
 import imask from 'imask';
 import datepicker from 'js-datepicker';
 import { format as dateFormat } from 'date-fns';
@@ -23,6 +23,7 @@ window.datepicker = datepicker;
 window.dateHelper = {
   format: dateFormat,
 };
+window.Ymaps = ymaps;
 
 lazySizes.cfg.lazyClass = 'lazy';
 lazySizes.cfg.srcAttr = 'data-original';
