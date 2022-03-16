@@ -9,8 +9,8 @@ class Map extends Widget {
     Ymaps
       .load()
       .then(maps => {
-        const map = new maps.Map(this.mapContainer, {
-          center: [-8.369326, 115.166023],
+        new maps.Map(this.mapContainer, {
+          center: [53.902615, 27.559790],
           zoom: 7
         });
       })
