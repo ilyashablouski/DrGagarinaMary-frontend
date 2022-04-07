@@ -4,14 +4,15 @@ class Carousel extends Widget {
 
     this.swiper = null;
     this.activeFilter = null;
+    this.withPagination = !!this.$node.dataset.carouselWithPagination;
+    this.withNavigation = !!this.$node.dataset.carouselWithNavifation;
+    this.withAutoplay = !!this.$node.dataset.carouselWithAutoplay;
+    this.withCoverflowEffect = !!this.$node.dataset.carouselCoverflowEffect;
     this.$slider = this.queryElement('.slider');
     this.$slides = this.queryElements('.item');
-    // this.$navPrev = this.queryElement('.prev');
-    // this.$navNext = this.queryElement('.next');
+    this.$navPrev = this.withNavigation && this.queryElement('.prev');
+    this.$navNext = this.withNavigation && this.queryElement('.next');
     this.$tabs = this.queryElements('.tab');
-    // this.isBig = !!this.$node.dataset.carouselBig;
-    this.withPagination = !!this.$node.dataset.carouselWithPagination;
-
     this.onLayoutChange = this.onLayoutChange.bind(this);
 
     this.init();
@@ -45,46 +46,46 @@ class Carousel extends Widget {
   }
 
   initSwiper() {
-    // If Carousel with scrollbar
-    // if (document.querySelector('.swiper-scrollbar')) {
-    //   this.swiper = new Swiper(this.$slider, {
-    //     slidesPerView: 'auto',
-    //     scrollbar: {
-    //       el: '.swiper-scrollbar',
-    //       draggable: true,
-    //     },
-    //     grabCursor: true,
-    //     spaceBetween: 0,
-    //     preventClicks: false,
-    //     preventClicksPropagation: false,
-    //     navigation: {
-    //       prevEl: this.$navPrev,
-    //       nextEl: this.$navNext,
-    //     },
-    //     on: {
-    //       slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
-    //       slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
-    //     },
-    //   });
-    // } else {
-
-    this.swiper = new Swiper(this.$slider, {
-      slidesPerView: 'auto',
-      pagination: this.withPagination ? {
-        el: '.swiper-pagination',
-        clickable: true,
-      } : false,
-      spaceBetween: 90,
-      loop: true,
-      effect: 'coverflow',
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 200,
-        modifier: 3,
-        slideShadows: false,
-      },
-    });
+    if (this.withCoverflowEffect) {
+      this.swiper = new Swiper(this.$slider, {
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        spaceBetween: 90,
+        loop: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 3,
+          slideShadows: false,
+        },
+      });
+    } else {
+      this.swiper = new Swiper(this.$slider, {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        pagination: this.withPagination ? {
+          el: '.swiper-pagination',
+          clickable: true,
+        } : false,
+        grabCursor: true,
+        loop: true,
+        autoplay: this.withAutoplay ? {
+          delay: 2500,
+          disableOnInteraction: false,
+        } : false,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        navigation: this.withNavigation ? {
+          prevEl: this.$navPrev,
+          nextEl: this.$navNext,
+        } : false,
+      });
+    }
   }
 
   events() {

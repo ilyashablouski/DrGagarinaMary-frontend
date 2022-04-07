@@ -1,0 +1,32 @@
+{{#> modules/carousel/_component autoplay=true }}
+  {{#times  4}}
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      <div class="companies__logo">
+        <span class="companies__logo-link">
+          {{> components/image img='home/companies/company_1' ext="png" no-2x=true}}
+          {{> components/image img='home/companies/company_1' ext="png" no-2x=true}}
+        </span>
+      </div>
+    </div>
+  {{/times}}
+
+  <div class="carousel__slide swiper-slide js-carousel__item">
+    <div class="companies__logo">
+      <span class="companies__logo-link">
+        {{> components/image img='home/companies/company_2' ext="png" no-2x=true}}
+        {{> components/image img='home/companies/company_2' ext="png" no-2x=true}}
+      </span>
+    </div>
+  </div>
+
+  {{#times  4}}
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      <div class="companies__logo">
+        <span class="companies__logo-link">
+          {{> components/image img='home/companies/company_1' ext="png" no-2x=true}}
+          {{> components/image img='home/companies/company_1' ext="png" no-2x=true}}
+        </span>
+      </div>
+    </div>
+  {{/times}}
+{{/modules/carousel/_component}}

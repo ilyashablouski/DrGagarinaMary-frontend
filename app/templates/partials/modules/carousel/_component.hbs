@@ -1,5 +1,7 @@
-<div class="carousel js-carousel" {{#if full-slide}}data-carousel-with-pagination="1"{{/if}} {{#if
-  big}}data-carousel-big="1"{{/if}}>
+<div class="carousel js-carousel" {{#if pagination}}data-carousel-with-pagination="1"{{/if}} {{#if
+  navigation}}data-carousel-with-navigation="1"{{/if}} {{#if
+  coverflow}}data-carousel-coverflow-effect="1"{{/if}}
+  {{#if autoplay}}data-carousel-with-autoplay="1"{{/if}}>
   <div class="carousel__wrapper">
     {{#if tabs}}
       <div class="carousel__tabs">
@@ -24,14 +26,24 @@
         </div>
       </div>
     {{/if}}
-    <div class="carousel__slider {{#if full-slide}}carousel__slider--full{{/if}}">
+    <div class="carousel__slider">
+      {{#if navigation }}
+        <div class="carousel__prev">
+          <button class="button-nav button-nav--prev js-carousel__prev"></button>
+        </div>
+        <div class="carousel__next">
+          <button class="button-nav button-nav--next js-carousel__next"></button>
+        </div>
+      {{/if}}
       <div class="carousel__row">
         <div class="swiper-container js-carousel__slider">
           <div class="swiper-wrapper">
             {{> @partial-block}}
           </div>
 
-          <div class="swiper-pagination"></div>
+          {{#if pagination}}
+            <div class="swiper-pagination"></div>
+          {{/if}}
 
           {{#if swiper-scrollbar}}
             <div class="swiper-scrollbar"></div>

@@ -3,14 +3,14 @@
   background: #FFFFFF;
 
   &__logos {
-    margin: 0 -$desktopGutter;
-    display: flex;
-    justify-content: space-around;
+    //margin: 0 -20px;
+    //display: flex;
+    //justify-content: space-around;
   }
 
   &__logo {
     position: relative;
-    margin: 0 $desktopGutter;
+    //margin: 0 $desktopGutter;
     overflow: hidden;
 
     &-link {
@@ -32,6 +32,7 @@
     }
 
     img {
+      margin: 0 auto;
       min-height: 150px;
       object-fit: contain;
       width: 100%;
@@ -54,6 +55,13 @@
           transform: translate(-50%, -100%);
         }
       }
+    }
+  }
+
+  .carousel {
+    .carousel__slide {
+      margin-right: $desktopGutter;
+      width: calc(20% - 20px);
     }
   }
 }

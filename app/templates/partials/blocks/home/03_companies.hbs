@@ -1,20 +1,7 @@
 <section class="companies">
   <div class="container">
     <div class="companies__logos">
-      {{#times 4}}
-        <div class="companies__logo">
-          <a href="" class="companies__logo-link">
-            {{> components/image img='home/companies/company_1' ext="png" no-2x=true}}
-            {{> components/image img='home/companies/company_1' ext="png" no-2x=true}}
-          </a>
-        </div>
-      {{/times}}
-      <div class="companies__logo">
-        <a href="" class="companies__logo-link">
-          {{> components/image img='home/companies/company_2' ext="png" no-2x=true}}
-          {{> components/image img='home/companies/company_2' ext="png" no-2x=true}}
-        </a>
-      </div>
+      {{> modules/carousel/companies-logos}}
     </div>
   </div>
 </section>
