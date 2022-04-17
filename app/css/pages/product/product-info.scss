@@ -6,13 +6,21 @@
   }
 
   &__image {
-    flex-grow: 1;
+    padding: 30px;
+    flex: 1 1 40%;
+    max-width: 40%;
+    border: 1px solid $color-primary;
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
   }
 
   &__description {
-    margin-left: 20px;
-    flex: 1 1 632px;
-    max-width: 632px;
+    margin-left: 50px;
+    flex: 1 1 calc(60% - 50px);
+    max-width: calc(60% - 50px);
   }
 
   &__heading {

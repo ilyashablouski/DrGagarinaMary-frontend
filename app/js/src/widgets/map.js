@@ -11,7 +11,7 @@ class Map extends Widget {
       .then(maps => {
         new maps.Map(this.mapContainer, {
           center: [53.902615, 27.559790],
-          zoom: 7
+          zoom: 7,
         });
       })
       .catch(error => console.log('Failed to load Yandex Maps', error));

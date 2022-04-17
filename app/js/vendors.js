@@ -12,6 +12,7 @@ import ymaps from 'ymaps';
 import imask from 'imask';
 import datepicker from 'js-datepicker';
 import { format as dateFormat } from 'date-fns';
+import ImageZoom from 'js-image-zoom';
 
 SwiperCore.use([Pagination, EffectCoverflow, Autoplay]);
 
@@ -24,6 +25,7 @@ window.dateHelper = {
   format: dateFormat,
 };
 window.Ymaps = ymaps;
+window.imageZoom = ImageZoom;
 
 lazySizes.cfg.lazyClass = 'lazy';
 lazySizes.cfg.srcAttr = 'data-original';

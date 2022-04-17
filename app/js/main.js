@@ -37,6 +37,7 @@ import './src/widgets/inputs/datepicker';
 import './src/widgets/carousel';
 import './src/widgets/tabs';
 import './src/widgets/map';
+import './src/widgets/image-zoom'
 
 import './src/app';
 
