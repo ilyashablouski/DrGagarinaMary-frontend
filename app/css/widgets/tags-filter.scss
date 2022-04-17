@@ -1,0 +1,35 @@
+.tags-filter {
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $color-primary;
+  &__title {
+    padding-bottom: 15px;
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__tags {
+    padding-top: 15px;
+    border-top: 1px solid #d0cece;
+
+    &-wrapper {
+      margin: -4px -4px 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__tag {
+    margin: 4px;
+    padding: 5px 20px;
+    border-radius: 14px;
+    background: #f8f8f8;
+    font-style: italic;
+
+    &:hover, &.active {
+      background: $color-gold;
+      color: $color-white;
+    }
+  }
+}

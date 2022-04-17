@@ -1,17 +1,33 @@
 <section class="products-grid">
   <div class="container">
     <div class="products-grid__wrapper">
-      {{#times 4}}
-        <div class="products-grid__product">
-          {{> widgets/product-card img-src="products/product-1" label="Крем" price="40"}}
+      <div class="products-grid__left">
+        <div class="products-grid__categories-filter">
+          {{> widgets/categories-filter }}
         </div>
-      {{/times}}
+        <div class="products-grid__tags-filter">
+          {{> widgets/tags-filter }}
+        </div>
+      </div>
 
-      {{#times 4}}
-        <div class="products-grid__product">
-          {{> widgets/product-card img-src="products/product-2" label="Губная помада" price="320"}}
+      <div class="products-grid__right">
+        <div class="products-grid__select-filter">
+          {{> widgets/select-filter }}
         </div>
-      {{/times}}
+        <div class="products-grid__main">
+          {{#times 4}}
+            <div class="products-grid__product">
+              {{> widgets/product-card img-src="products/product-1" label="Крем" price="40"}}
+            </div>
+          {{/times}}
+
+          {{#times 4}}
+            <div class="products-grid__product">
+              {{> widgets/product-card img-src="products/product-2" label="Губная помада" price="320"}}
+            </div>
+          {{/times}}
+        </div>
+      </div>
     </div>
   </div>
 </section>

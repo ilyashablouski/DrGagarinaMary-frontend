@@ -1,5 +1,6 @@
 .product-card {
   position: relative;
+  overflow: hidden;
 
   &:hover {
     .product-card__label {

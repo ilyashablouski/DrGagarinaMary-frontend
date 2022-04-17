@@ -2,6 +2,21 @@
   margin-top: 130px;
 
   &__wrapper {
+    display: flex;
+  }
+
+  &__left {
+    flex: 1 1 20%;
+    max-width: 20%;
+  }
+
+  &__right {
+    margin-left: 45px;
+    flex: 1 1 80%;
+    max-width: 80%;
+  }
+
+  &__main {
     margin: -40px -10px 0;
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +25,11 @@
   &__product {
     padding: 0 10px;
     margin-top: 40px;
-    flex: 1 1 25%;
-    max-width: 25%;
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
+  }
+
+  &__tags-filter {
+    margin-top: 35px;
   }
 }
