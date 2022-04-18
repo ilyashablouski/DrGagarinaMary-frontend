@@ -3,20 +3,10 @@
     <span class="service-price__title">Прайс лист Massage</span>
 
     <div class="service-price__accordion">
-      {{# times 5}}
-        <div class="service-price__item js-accord">
-          <div class="service-price__heading js-accord__toggle">
-            <span class="service-price__label">Аромарелакс – массаж маслом свечой</span>
-            <span class="service-price__price">от&nbsp;350&nbsp;BYN</span>
-            <div class="service-price__button">
-              {{> ui/plus-btn }}
-            </div>
-          </div>
-
-          <p class="service-price__body js-accord__body">
-            База, тон, контуринг лица, брови, стрелки, акцент на глаза или губы, тушь, ресницы-пучки
-          </p>
-        </div>
+      {{# times 5 }}
+        {{> widgets/accordion label="Аромарелакс – массаж маслом свечой" price="350"
+          text="База, тон, контуринг лица, брови, стрелки, акцент на глаза или губы, тушь, ресницы-пучки"
+        }}
       {{/times}}
     </div>
   </div>

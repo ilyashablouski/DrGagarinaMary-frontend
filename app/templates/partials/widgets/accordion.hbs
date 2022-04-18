@@ -1,0 +1,13 @@
+<div class="accordion js-accord">
+  <div class="accordion__heading js-accord__toggle">
+    <span class="accordion__label">{{label}}</span>
+    {{#if price}}<span class="accordion__price">от&nbsp;{{price}}&nbsp;BYN</span>{{/if}}
+    <div class="accordion__button">
+      {{> ui/plus-btn }}
+    </div>
+  </div>
+
+  <p class="accordion__body js-accord__body">
+    {{text}}
+  </p>
+</div>
