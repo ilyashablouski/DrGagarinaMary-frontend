@@ -1,0 +1,15 @@
+{{#> modules/carousel/_component navigation=true}}
+  {{#times 2}}
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      <div class="services__cell">{{> widgets/service-card image='home/services/service_1' banner-color='blue'}}</div>
+    </div>
+
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      <div class="services__cell">{{> widgets/service-card image='home/services/service_2' banner-color='orange'}}</div>
+    </div>
+
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      <div class="services__cell">{{> widgets/service-card image='home/services/service_3'}}</div>
+    </div>
+  {{/times}}
+{{/modules/carousel/_component}}

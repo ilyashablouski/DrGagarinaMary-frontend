@@ -1,0 +1,32 @@
+.questions {
+  padding-top: 120px;
+  background: #FFFFFF;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  &__title {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 40px;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+
+  &__accordion {
+    margin-top: 20px;
+  }
+
+  &__image {
+    margin-left: 80px;
+    flex: 1 1 calc(50% - 80px);
+    max-width: calc(50% - 80px);
+  }
+}

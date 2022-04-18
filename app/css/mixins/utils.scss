@@ -97,7 +97,7 @@
   transform: rotate($deg);
 }
 
-@mixin transition($duration: 200ms, $property: all, $fn: ease-in-out) {
+@mixin transition($duration: 250ms, $property: all, $fn: ease-in-out) {
   transition: $property $duration $fn;
 }
 

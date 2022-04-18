@@ -7,14 +7,14 @@ import 'lazysizes/plugins/object-fit/ls.object-fit';
 import svgPolyfill from 'svg4everybody';
 import jquery from 'jquery';
 import swiper, { Autoplay } from 'swiper';
-import SwiperCore, { Pagination, EffectCoverflow } from 'swiper/core';
+import SwiperCore, {Navigation, Pagination, EffectCoverflow } from 'swiper/core';
 import ymaps from 'ymaps';
 import imask from 'imask';
 import datepicker from 'js-datepicker';
 import { format as dateFormat } from 'date-fns';
 import ImageZoom from 'js-image-zoom';
 
-SwiperCore.use([Pagination, EffectCoverflow, Autoplay]);
+SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;

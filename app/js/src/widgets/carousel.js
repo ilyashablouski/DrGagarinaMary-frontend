@@ -5,7 +5,7 @@ class Carousel extends Widget {
     this.swiper = null;
     this.activeFilter = null;
     this.withPagination = !!this.$node.dataset.carouselWithPagination;
-    this.withNavigation = !!this.$node.dataset.carouselWithNavifation;
+    this.withNavigation = !!this.$node.dataset.carouselWithNavigation;
     this.withAutoplay = !!this.$node.dataset.carouselWithAutoplay;
     this.withCoverflowEffect = !!this.$node.dataset.carouselCoverflowEffect;
     this.$slider = this.queryElement('.slider');
@@ -65,6 +65,11 @@ class Carousel extends Widget {
         },
       });
     } else {
+      console.log("this.withNavigation: ", this.withNavigation);
+      console.log(this.$navPrev);
+      console.log(this.$navNext);
+
+
       this.swiper = new Swiper(this.$slider, {
         slidesPerView: 'auto',
         centeredSlides: true,
@@ -72,17 +77,15 @@ class Carousel extends Widget {
           el: '.swiper-pagination',
           clickable: true,
         } : false,
+        navigation: this.withNavigation ? {
+          prevEl: this.$navPrev,
+          nextEl: this.$navNext,
+        } : false,
         grabCursor: true,
         loop: true,
         autoplay: this.withAutoplay ? {
           delay: 2500,
           disableOnInteraction: false,
-        } : false,
-        preventClicks: false,
-        preventClicksPropagation: false,
-        navigation: this.withNavigation ? {
-          prevEl: this.$navPrev,
-          nextEl: this.$navNext,
         } : false,
       });
     }

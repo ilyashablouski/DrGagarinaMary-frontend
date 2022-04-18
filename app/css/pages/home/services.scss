@@ -21,13 +21,17 @@
 
   &__row {
     margin-top: 115px;
-    margin-left: -$desktopGutter;
-    margin-right: -$desktopGutter;
-    display: flex;
   }
 
-  &__cell {
-    padding: 0 $desktopGutter;
-    width: 100%;
+  .carousel {
+    &__slider {
+      margin-left: -20px;
+    }
+
+
+    .carousel__slide {
+      margin-left: $desktopGutter;
+      width: calc(33.33% - 20px);
+    }
   }
 }

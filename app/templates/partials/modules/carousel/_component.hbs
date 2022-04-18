@@ -28,12 +28,12 @@
     {{/if}}
     <div class="carousel__slider">
       {{#if navigation }}
-        <div class="carousel__prev">
-          <button class="button-nav button-nav--prev js-carousel__prev"></button>
-        </div>
-        <div class="carousel__next">
-          <button class="button-nav button-nav--next js-carousel__next"></button>
-        </div>
+        <button class="carousel__nav carousel__nav--prev js-carousel__prev">
+          <i class="swiper-navigation swiper-navigation--prev"></i>
+        </button>
+        <button class="carousel__nav carousel__nav--next js-carousel__next">
+          <i class="swiper-navigation swiper-navigation--next"></i>
+        </button>
       {{/if}}
       <div class="carousel__row">
         <div class="swiper-container js-carousel__slider">
@@ -43,10 +43,6 @@
 
           {{#if pagination}}
             <div class="swiper-pagination"></div>
-          {{/if}}
-
-          {{#if swiper-scrollbar}}
-            <div class="swiper-scrollbar"></div>
           {{/if}}
         </div>
       </div>

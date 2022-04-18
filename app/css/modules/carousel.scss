@@ -5,9 +5,11 @@
     justify-content: center;
   }
 
-  &__slider {
+  &__wrapper {
     position: relative;
+  }
 
+  &__slider {
     ._with-pagination & {
       @include desktop {
         .swiper-wrapper {
@@ -61,33 +63,39 @@
     height: auto;
   }
 
-  &__prev {
+  &__nav {
     @include no-desktop {
       display: none;
     }
 
     position: absolute;
+    z-index: 2;
     top: 50%;
-    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, .75);
+    border-radius: 100%;
     transform: translateY(-50%) translateX(-100%);
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+    }
 
     .no-navigation & {
       display: none;
     }
-  }
 
-  &__next {
-    @include no-desktop {
-      display: none;
+    &--prev {
+      left: 70px;
     }
 
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    transform: translateY(-50%) translateX(100%);
-
-    .no-navigation & {
-      display: none;
+    &--next {
+      right: -30px;
     }
   }
 

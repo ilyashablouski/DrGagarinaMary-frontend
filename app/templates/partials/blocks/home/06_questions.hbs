@@ -1,0 +1,29 @@
+<section class="questions">
+  <div class="container">
+    <div class="questions__wrapper">
+      <div class="questions__container">
+        <span class="questions__title">General questions</span>
+        <div class="questions__accordion">
+          {{# times 3 }}
+            {{> widgets/accordion label="Что надеть во время лечения?"
+              text="Integer ut molestie sapien. Suspendisse in pharetra ligula, vitae cursus lectus.
+             Donec non velit ut orci vehicula pharetra eu eget lectus. Sed convallis rhoncus elementum.
+             Sed ut turpis consequat, dapibus mauris quis, venenatis tortor."
+            }}
+          {{/times}}
+          {{# times 2 }}
+            {{> widgets/accordion label="Придется ли мне раздеваться для спа-процедур?"
+              text="Integer ut molestie sapien. Suspendisse in pharetra ligula, vitae cursus lectus.
+             Donec non velit ut orci vehicula pharetra eu eget lectus. Sed convallis rhoncus elementum.
+             Sed ut turpis consequat, dapibus mauris quis, venenatis tortor."
+            }}
+          {{/times}}
+        </div>
+      </div>
+
+      <div class="questions__image">
+        {{> components/image img='home/questions/questions_1' ext="jpg" no-2x=true}}
+      </div>
+    </div>
+  </div>
+</section>

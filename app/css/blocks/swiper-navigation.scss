@@ -1,0 +1,26 @@
+.swiper-navigation {
+  position: relative;
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+
+  &:before {
+    content: '';
+    display: inline-flex;
+    width: 22px;
+    height: 22px;
+    border-top: 2px solid $color-primary;
+  }
+
+  &--prev {
+    left: 5px;
+    transform: rotate(-48deg);
+    border-left: 2px solid $color-primary;
+  }
+
+  &--next {
+    right: 5px;
+    transform: rotate(48deg);
+    border-right: 2px solid $color-primary;
+  }
+}

@@ -2,15 +2,8 @@
   padding: 110px 0;
   background: #FFFFFF;
 
-  &__logos {
-    //margin: 0 -20px;
-    //display: flex;
-    //justify-content: space-around;
-  }
-
   &__logo {
     position: relative;
-    //margin: 0 $desktopGutter;
     overflow: hidden;
 
     &-link {
@@ -59,8 +52,10 @@
   }
 
   .carousel {
+    margin-left: -20px;
+
     .carousel__slide {
-      margin-right: $desktopGutter;
+      margin-left: $desktopGutter;
       width: calc(20% - 20px);
     }
   }
