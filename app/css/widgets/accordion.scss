@@ -5,13 +5,19 @@
     border-top: 1px solid #ddd;
   }
 
-  &.opened .accordion__body {
-    display: block;
-  }
+  &.opened {
+    .accordion__body {
+      display: block;
+    }
 
-  &.opened .plus-btn {
-    &:after {
-      transform: translate(-50%, -50%) rotate(-90deg);
+    .accordion__label {
+      color: $color-secondary;
+    }
+
+    .plus-btn {
+      &:after {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
     }
   }
 
@@ -22,14 +28,23 @@
     align-items: center;
     font-size: 20px;
     cursor: pointer;
+
+    &:hover {
+      .accordion__label {
+        color: $color-secondary;
+      }
+    }
   }
 
   &__label {
+    font-weight: 500;
     color: $color-primary;
+    @include transition;
   }
 
   &__price {
     margin-left: auto;
+    font-weight: 500;
     color: $color-gold-dark;
   }
 
