@@ -1,7 +1,30 @@
 .select-filter {
+  position: relative;
+
   &__select {
     padding: 0 10px;
     height: 40px;
     color: $color-primary;
+    cursor: pointer;
+    border: 1px solid $color-primary;
+  }
+
+  &__arrow {
+    margin-top: -2px;
+    @include align(false, true);
+    right: 12px;
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+
+    &:before {
+      content: '';
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid $color-primary;
+      border-right: 1px solid $color-primary;
+      transform: rotate(135deg);
+    }
   }
 }
