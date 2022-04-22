@@ -9,6 +9,7 @@ import './src/core/uikit/uikit-accord';
 
 import './src/modules/header/header';
 import './src/modules/header/header-menu';
+import './src/modules/header/header-fixed';
 
 import './src/utils/helpers';
 import './src/utils/device';

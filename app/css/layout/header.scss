@@ -7,6 +7,26 @@
   background: $color-white;
   color: $color-dark;
   letter-spacing: 0.1em;
+  transition: top .3s ease-in-out;
+
+  &.fixed-prepare {
+    position: fixed;
+    top: -100px;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg,#fff,#fff);
+    box-shadow: 0 5px 26px rgb(1 64 139 / 14%);
+  }
+
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
 
   @include tablet-and-mobile {
     position: fixed;

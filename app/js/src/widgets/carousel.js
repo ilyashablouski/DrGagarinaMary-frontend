@@ -64,12 +64,7 @@ class Carousel extends Widget {
           slideShadows: false,
         },
       });
-    } else {
-      console.log("this.withNavigation: ", this.withNavigation);
-      console.log(this.$navPrev);
-      console.log(this.$navNext);
-
-
+    } else {``
       this.swiper = new Swiper(this.$slider, {
         slidesPerView: 'auto',
         centeredSlides: true,

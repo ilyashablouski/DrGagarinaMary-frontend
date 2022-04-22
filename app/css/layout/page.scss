@@ -2,6 +2,10 @@
   display: flex;
   justify-content: center;
 
+  &.header-fixed {
+    margin-top: 100px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -35,7 +39,7 @@
     right: 0;
     background: transparent;
     backdrop-filter: blur(0);
-    z-index: 2;
+    z-index: 4;
     @include transition(.2s);
     visibility: hidden;
     will-change: backdrop-filter;
