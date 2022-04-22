@@ -3,7 +3,7 @@ class HeaderMenu extends Widget {
     super(node, 'js-header');
 
     this.burgerBtn = this.queryElement('.burger');
-    this.closeBtn = this.queryElement('.close');
+    this.closeBtn = document.querySelector('.js-header__close');
     this.isOpened = false;
 
     this.onShowCloseClick = this.onShowCloseClick.bind(this);
