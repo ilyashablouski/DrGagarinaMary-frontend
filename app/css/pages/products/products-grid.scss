@@ -16,6 +16,10 @@
     max-width: 80%;
   }
 
+  &__container {
+    margin-top: 20px;
+  }
+
   &__main {
     margin: -40px -10px 0;
     display: flex;
@@ -31,5 +35,10 @@
 
   &__tags-filter {
     margin-top: 35px;
+  }
+
+  &__select-filter {
+    display: flex;
+    justify-content: flex-end;
   }
 }
