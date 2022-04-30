@@ -26,6 +26,11 @@
     flex-wrap: wrap;
   }
 
+  &__filter {
+    position: sticky;
+    top: calc(5% + 100px);
+  }
+
   &__product {
     padding: 0 10px;
     margin-top: 40px;
