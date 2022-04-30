@@ -22,10 +22,13 @@
 
   &__wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: calc(100vh - 100px);
     text-align: center;
+  }
+
+  &__container {
+    margin: auto 0;
   }
 
   &__title {
@@ -95,6 +98,12 @@
         }
       }
     }
+  }
+
+  &__wheel {
+    padding: 20px 0;
+    text-align: center;
+    line-height: 100%;
   }
 
 }
