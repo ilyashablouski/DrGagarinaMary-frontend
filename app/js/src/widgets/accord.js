@@ -44,8 +44,10 @@ class Accord extends Widget {
   }
 
   close() {
-    this.collapse();
-    this.$node.classList.remove('opened');
+    widgetInstances.forEach(accordInstance => {
+      accordInstance.collapse();
+      accordInstance.$node.classList.remove('opened');
+    });
   }
 
   onToggleClick(e) {
@@ -53,7 +55,14 @@ class Accord extends Widget {
     if (this.busy) return;
     this.busy = true;
 
-    !this.$node.classList.contains('opened') ? this.open() : this.close();
+    const isClosed = !this.$node.classList.contains('opened');
+
+    if (isClosed) {
+      this.close();
+      this.open();
+    } else {
+      this.close();
+    }
   }
 
   collapse() {
