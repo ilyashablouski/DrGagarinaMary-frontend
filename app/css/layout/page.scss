@@ -20,7 +20,6 @@
   &__content {
     flex: 1 0 auto;
     min-height: 1px;
-    overflow: hidden;
 
     @include tablet-and-mobile{
       margin-top: 75px;
