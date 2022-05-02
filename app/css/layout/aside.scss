@@ -12,7 +12,7 @@
   will-change: transform;
   overflow-y: auto;
 
-  @include tablet-and-mobile {
+  @include smallTablet-and-mobile {
     display: none;
   }
 

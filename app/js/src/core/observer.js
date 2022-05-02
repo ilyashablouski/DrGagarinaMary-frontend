@@ -8,7 +8,7 @@ class Observer {
   }
 
   unsubscribe(callback) {
-    this.listeners = this.listeners.filter(_item => _item !== callback);
+    this.listeners = this.listeners.filter(_item => _item === callback);
   }
 }
 

@@ -1,12 +1,11 @@
 .header-menu {
-  @include tablet-and-mobile {
+  @include smallTablet-and-mobile {
     position: fixed;
     left: 0;
     top: 74px;
-    padding: 0 $tabletGutter;
+    padding: 0 $mobileGutter;
     width: 100%;
     background: #FFFFFF;
-    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%);
     transform: translateY(-100%);
     transition: transform .6s cubic-bezier(.77,0,.175,1);
     will-change: transform;
@@ -15,7 +14,7 @@
   &__nav {
     display: flex;
 
-    @include tablet-and-mobile {
+    @include smallTablet-and-mobile {
       display: block;
     }
   }
@@ -24,7 +23,7 @@
     &:not(:first-child) {
       margin-left: 50px;
 
-      @include tablet-and-mobile {
+      @include smallTablet-and-mobile {
         margin-left: 0;
         border-top: 1px solid #afaaa9;
       }
@@ -37,9 +36,10 @@
       font-weight: 500;
       text-transform: uppercase;
 
-      @include tablet-and-mobile {
+      @include smallTablet-and-mobile {
         padding: 10px 0;
         display: block;
+        font-size: 16px;
       }
 
 
@@ -59,13 +59,13 @@
       &:hover:before {
         transform: scale(1, 1);
 
-        @include tablet-and-mobile {
+        @include smallTablet-and-mobile {
           transform: scale(0, 0);
         }
       }
 
       &.active {
-        @include tablet-and-mobile {
+        @include smallTablet-and-mobile {
           color: $color-secondary;
         }
       }
@@ -73,7 +73,7 @@
       &.active:before {
         transform: scale(1, 1);
 
-        @include tablet-and-mobile {
+        @include smallTablet-and-mobile {
           transform: scale(0, 0);
         }
       }
@@ -82,7 +82,7 @@
     &-icon {
       display: none;
 
-      @include tablet-and-mobile {
+      @include smallTablet-and-mobile {
         position: absolute;
         @include align(false, true);
         right: 0;

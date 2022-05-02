@@ -105,7 +105,7 @@
     bottom: 0;
     @include align(true, false);
 
-    @include tablet-and-mobile {
+    @include smallTablet-and-mobile {
       display: none;
     }
   }

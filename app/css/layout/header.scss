@@ -9,10 +9,19 @@
   letter-spacing: 0.1em;
   transition: top .3s ease-in-out;
 
+  @include smallTablet-and-mobile {
+    position: fixed;
+    z-index: 4;
+    padding: 0 $mobileGutter;
+    min-height: 75px;
+    background: linear-gradient(0deg,#fff,#fff);
+    box-shadow: 0 5px 26px rgb(1 64 139 / 14%);
+  }
+
   &.fixed-prepare {
     position: fixed;
     top: -100px;
-    z-index: 3;
+    z-index: 4;
     left: 0;
     right: 0;
     background: linear-gradient(0deg,#fff,#fff);
@@ -27,20 +36,12 @@
     top: 0;
   }
 
-
-  @include tablet-and-mobile {
-    position: fixed;
-    z-index: 2;
-    padding: 0 $tabletGutter;
-    min-height: 75px;
-  }
-
   &.opened {
     ~.aside {
       transform: translateX(0);
     }
 
-    @include tablet-and-mobile {
+    @include smallTablet-and-mobile {
       .header-menu {
         transform: translateY(0);
       }
@@ -55,11 +56,9 @@
   }
 
   &__left {
-    @include tablet-and-mobile {
-      position: fixed;
+    @include smallTablet-and-mobile {
+      position: relative;
       z-index: 1;
-      top: 0;
-      left: 0;
       display: flex;
       align-items: center;
       min-height: 75px;
@@ -74,7 +73,7 @@
     display: flex;
     align-items: center;
 
-    @include tablet-and-mobile {
+    @include smallTablet-and-mobile {
       display: block;
       margin: 0;
       padding: 0;
@@ -82,7 +81,7 @@
   }
 
   &__right {
-    @include tablet-and-mobile {
+    @include smallTablet-and-mobile {
       display: none;
     }
   }
@@ -92,7 +91,7 @@
     width: 75px;
     height: 75px;
 
-    @include tablet-and-mobile {
+    @include smallTablet-and-mobile {
       margin: 0 auto;
       width: 65px;
       height: 65px;
@@ -105,7 +104,7 @@
     width: 30px;
     height: 12px;
 
-    @include tablet-and-mobile {
+    @include smallTablet-and-mobile {
       @include align(false, true);
       margin-left: 0;
       left: 0;
