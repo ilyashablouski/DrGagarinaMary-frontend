@@ -1,6 +1,9 @@
 .companies {
   padding: 110px 0;
   background: #FFFFFF;
+  @include smallTablet-and-mobile {
+    padding: 90px 0;
+  }
 
   &__logo {
     position: relative;
@@ -53,10 +56,20 @@
 
   .carousel {
     margin-left: -20px;
+    @include mobile {
+      margin-left: -16px;
+    }
 
     .carousel__slide {
       margin-left: $desktopGutter;
       width: calc(20% - 20px);
+      @include smallTablet {
+        width: calc(25% - 20px);
+      }
+      @include mobile {
+        width: calc(50% - 20px);
+      }
+
     }
   }
 }
