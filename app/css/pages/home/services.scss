@@ -2,6 +2,10 @@
   padding-top: 120px;
   background: #FFFFFF;
 
+  @include smallTablet-and-mobile {
+    padding-top: 90px;
+  }
+
   &__heading {
     max-width: 800px;
 
@@ -12,6 +16,10 @@
       line-height: 1.5em;
       text-transform: uppercase;
       color: $color-primary;
+
+      @include mobile {
+        font-size: 32px;
+      }
     }
 
     &-text {
@@ -20,18 +28,34 @@
   }
 
   &__row {
-    margin-top: 115px;
+    margin-top: 95px;
+
+    @include smallTablet-and-mobile {
+      margin-top: 65px;
+    }
   }
 
   .carousel {
     &__slider {
       margin-left: -20px;
+
+      @include mobile {
+        margin-left: -16px;
+      }
     }
 
 
     .carousel__slide {
       margin-left: $desktopGutter;
       width: calc(33.33% - 20px);
+
+      @include smallTablet {
+        width: calc(50% - 20px);
+      }
+
+      @include mobile {
+        width: calc(100% - 20px);
+      }
     }
   }
 }

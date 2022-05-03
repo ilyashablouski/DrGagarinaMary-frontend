@@ -9,21 +9,7 @@
     position: relative;
   }
 
-  &__slider {
-    ._with-pagination & {
-      @include desktop {
-        .swiper-wrapper {
-          padding-bottom: 20px;
-        }
-        .carousel__next, .carousel__prev {
-          margin-top: -20px;
-        }
-      }
-    }
-  }
-
   &__row {
-    @include reset-slider-container;
 
     .non-swiper-slide {
       display: none;
@@ -64,10 +50,6 @@
   }
 
   &__nav {
-    @include no-desktop {
-      display: none;
-    }
-
     position: absolute;
     z-index: 2;
     top: 50%;

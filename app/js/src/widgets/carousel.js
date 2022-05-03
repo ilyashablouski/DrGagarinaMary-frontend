@@ -13,7 +13,6 @@ class Carousel extends Widget {
     this.$navPrev = this.withNavigation && this.queryElement('.prev');
     this.$navNext = this.withNavigation && this.queryElement('.next');
     this.$tabs = this.queryElements('.tab');
-    this.onLayoutChange = this.onLayoutChange.bind(this);
 
     this.init();
   }
@@ -22,27 +21,7 @@ class Carousel extends Widget {
     this.events();
     this.default();
 
-    this.onLayoutChange();
-  }
-
-
-  onLayoutChange() {
-    if (Layout.isDesktopLayout()) {
-      this.initDesktop();
-    } else {
-      this.initMobile();
-    }
-  }
-
-  initDesktop() {
     this.initSwiper();
-  }
-
-  initMobile() {
-    if (this.swiper) {
-      this.swiper.destroy(true, true);
-      this.swiper = null;
-    }
   }
 
   initSwiper() {
@@ -64,10 +43,10 @@ class Carousel extends Widget {
           slideShadows: false,
         },
       });
-    } else {``
+    } else {
       this.swiper = new Swiper(this.$slider, {
         slidesPerView: 'auto',
-        centeredSlides: true,
+        centeredSlides: false,
         pagination: this.withPagination ? {
           el: '.swiper-pagination',
           clickable: true,
