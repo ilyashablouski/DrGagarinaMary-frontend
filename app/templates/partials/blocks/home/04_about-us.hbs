@@ -4,19 +4,19 @@
       <div class="about-us__left">
         <div class="about-us__image">
           {{> components/image img='home/about' ext="jpg" no-2x=true}}
+          <div class="about-us__text-spinner">
+            <svg viewBox="0 0 70 70" width="50%">
+              <defs>
+                <path d="M35,35m-23,0a23,23 0 1,1 46,0a23,23 0 1,1 -46,0" fill="lightpink" id="tophalf" />
+              </defs>
+              <text>
+                <textPath xlink:href="#tophalf" startOffset="0%">Dr. Mary</textPath>
+                <textPath xlink:href="#tophalf" startOffset="50%">Gagarina</textPath>
+              </text>
+            </svg>
+          </div>
         </div>
 
-        <div class="about-us__text-spinner">
-          <svg viewBox="0 0 70 70" width="30%">
-            <defs>
-              <path d="M35,35m-23,0a23,23 0 1,1 46,0a23,23 0 1,1 -46,0" fill="lightpink" id="tophalf" />
-            </defs>
-            <text>
-              <textPath xlink:href="#tophalf" startOffset="0%">Dr. Mary</textPath>
-              <textPath xlink:href="#tophalf" startOffset="50%">Gagarina</textPath>
-            </text>
-          </svg>
-        </div>
       </div>
       <div class="about-us__right">
         <span class="about-us__title">Наша история</span>

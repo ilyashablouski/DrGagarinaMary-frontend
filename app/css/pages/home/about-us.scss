@@ -1,22 +1,45 @@
 .about-us {
   padding: 120px 0;
   background: $color-creamy;
+  @include smallTablet-and-mobile {
+    padding: 90px 0;
+  }
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__left {
-    position: relative;
+    display: flex;
     flex: 1 1 50%;
     max-width: 50%;
+    @include smallTablet-and-mobile {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    @include smallTablet-and-mobile {
+      margin: 0 auto;
+    }
   }
 
   &__right {
     margin-left: 90px;
     margin-top: 50px;
-    flex: 1 1 420px;
-    max-width: 420px;
+    flex: 1 1 calc(420px - 90px);
+    max-width: calc(420px - 90px);
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+      margin-top: 90px;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -34,6 +57,10 @@
     line-height: 1.5em;
     font-size: 40px;
     color: $color-primary;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__text {
@@ -42,9 +69,8 @@
 
   &__text-spinner {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: translate(-5%, 10%);
+    left: -20px;
+    bottom: -40px;
     text-transform: uppercase;
     display: inline-flex;
 
