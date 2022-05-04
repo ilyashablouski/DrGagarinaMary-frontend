@@ -59,9 +59,9 @@
   <!--  <link rel="preload" href="/assets/fonts/CiscoSans/Regular.woff2" as="font" type="font/woff2" crossorigin>-->
   <!--  <link rel="preload" href="/assets/fonts/CiscoSans/Bold.woff2" as="font" type="font/woff2" crossorigin>-->
 
-  <link rel="stylesheet" href="../assets/fonts/fonts.css?v=4320">
+  <link rel="stylesheet" href="../assets/fonts/fonts.css?v=578">
 
-  <link rel="stylesheet" href="../css/main.css?v=4320">
+  <link rel="stylesheet" href="../css/main.css?v=578">
 
 </head>
 
@@ -136,7 +136,7 @@
   </div>
 </header>
 <div class="aside js-header__aside">
-  <button class="aside__close js-header__close">`
+  <button class="aside__close js-header__close">
     <i class="aside__close-icon"><svg class="icon icon--close-btn">
     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#close-btn"/>
 </svg>
@@ -233,43 +233,51 @@
 <section class="products-grid">
   <div class="container">
     <div class="products-grid__wrapper">
-      <div class="products-grid__left">
-        <div class="products-grid__filter">
-          <div class="products-grid__categories-filter">
-            <div class="categories-filter">
-              <span class="categories-filter__title">Categories</span>
-            
-              <ul class="categories-filter__list">
-                <li class="categories-filter__item">
-                  <a href="#" class="categories-filter__link">Ногти</a>
-                </li>
-                <li class="categories-filter__item">
-                  <a href="#" class="categories-filter__link">Волосы</a>
-                </li>
-                <li class="categories-filter__item">
-                  <a href="#" class="categories-filter__link">Массаж</a>
-                </li>
-                <li class="categories-filter__item">
-                  <a href="#" class="categories-filter__link">Nature</a>
-                </li>
-                <li class="categories-filter__item">
-                  <a href="#" class="categories-filter__link">Yoga</a>
-                </li>
-              </ul>
+      <div class="products-grid__left js-filter">
+        <button class="products-grid__filter-close js-filter__close">
+          <i class="products-grid__filter-close-icon"><svg class="icon icon--close-btn">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#close-btn"/>
+</svg>
+</i>
+        </button>
+        <div class="products-grid__filter-container">
+          <div class="products-grid__filter">
+            <div class="products-grid__categories-filter">
+              <div class="categories-filter">
+                <span class="categories-filter__title">Categories</span>
+              
+                <ul class="categories-filter__list">
+                  <li class="categories-filter__item">
+                    <a href="#" class="categories-filter__link">Ногти</a>
+                  </li>
+                  <li class="categories-filter__item">
+                    <a href="#" class="categories-filter__link">Волосы</a>
+                  </li>
+                  <li class="categories-filter__item">
+                    <a href="#" class="categories-filter__link">Массаж</a>
+                  </li>
+                  <li class="categories-filter__item">
+                    <a href="#" class="categories-filter__link">Nature</a>
+                  </li>
+                  <li class="categories-filter__item">
+                    <a href="#" class="categories-filter__link">Yoga</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="products-grid__tags-filter">
-            <div class="tags-filter">
-              <span class="tags-filter__title">Теги производителей</span>
-              <div class="tags-filter__tags">
-                <div class="tags-filter__tags-wrapper">
-                  <a href="#" class="tags-filter__tag active">Суперкрем</a>
-            
-                    <a href="#" class="tags-filter__tag">Gigi</a>
-                    <a href="#" class="tags-filter__tag">Gigi</a>
-                    <a href="#" class="tags-filter__tag">Gigi</a>
-                    <a href="#" class="tags-filter__tag">Gigi</a>
-                    <a href="#" class="tags-filter__tag">Gigi</a>
+            <div class="products-grid__tags-filter">
+              <div class="tags-filter">
+                <span class="tags-filter__title">Теги производителей</span>
+                <div class="tags-filter__tags">
+                  <div class="tags-filter__tags-wrapper">
+                    <a href="#" class="tags-filter__tag active">Суперкрем</a>
+              
+                      <a href="#" class="tags-filter__tag">Gigi</a>
+                      <a href="#" class="tags-filter__tag">Gigi</a>
+                      <a href="#" class="tags-filter__tag">Gigi</a>
+                      <a href="#" class="tags-filter__tag">Gigi</a>
+                      <a href="#" class="tags-filter__tag">Gigi</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -279,6 +287,7 @@
 
       <div class="products-grid__right">
         <div class="products-grid__select-filter">
+          <button class="products-grid__filter-open js-filter__open">Фильтры</button>
           <form class="select-filter" method="get">
             <select name="order-by" class="select-filter__select">
               <option value="menu-order" selected="selected">Default sorting</option>
@@ -642,8 +651,8 @@
 
 </div>
 
-<script src="../js/vendors.js?v=4320" defer></script>
-  <script src="../js/main.js?v=4320" defer></script>
+<script src="../js/vendors.js?v=578" defer></script>
+  <script src="../js/main.js?v=578" defer></script>
   <script type="text/javascript" src="https://w742955.yclients.com/widgetJS" charset="UTF-8"></script>
 </body>
 </html>
