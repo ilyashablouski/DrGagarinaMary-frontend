@@ -7,7 +7,7 @@ class Map extends Widget {
 
   build() {
     Ymaps
-      .load()
+      .load('https://api-maps.yandex.ru/2.1/?lang=ru_RU')
       .then(maps => {
         new maps.Map(this.mapContainer, {
           center: [53.902615, 27.559790],
