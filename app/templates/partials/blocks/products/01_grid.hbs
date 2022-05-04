@@ -1,19 +1,25 @@
 <section class="products-grid">
   <div class="container">
     <div class="products-grid__wrapper">
-      <div class="products-grid__left">
-        <div class="products-grid__filter">
-          <div class="products-grid__categories-filter">
-            {{> widgets/categories-filter }}
-          </div>
-          <div class="products-grid__tags-filter">
-            {{> widgets/tags-filter }}
+      <div class="products-grid__left js-filter">
+        <button class="products-grid__filter-close js-filter__close">
+          <i class="products-grid__filter-close-icon">{{> ui/svg name="close-btn"}}</i>
+        </button>
+        <div class="products-grid__filter-container">
+          <div class="products-grid__filter">
+            <div class="products-grid__categories-filter">
+              {{> widgets/categories-filter }}
+            </div>
+            <div class="products-grid__tags-filter">
+              {{> widgets/tags-filter }}
+            </div>
           </div>
         </div>
       </div>
 
       <div class="products-grid__right">
         <div class="products-grid__select-filter">
+          <button class="products-grid__filter-open js-filter__open">Фильтры</button>
           {{> widgets/select-filter }}
         </div>
         <div class="products-grid__container">

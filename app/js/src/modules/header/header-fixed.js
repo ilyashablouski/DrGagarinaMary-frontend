@@ -24,7 +24,6 @@ class HeaderFixed extends Widget {
 
   onLayoutChange() {
     if (this.bigTabletAndDesktopMediaQuery.matches) {
-      console.log("init");
       this.build();
     }
 

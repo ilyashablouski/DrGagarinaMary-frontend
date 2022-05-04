@@ -9,6 +9,35 @@
     display: flex;
   }
 
+  &__filter-open {
+    display: none;
+
+    @include smallTablet-and-mobile {
+      display: block;
+      padding: 0 10px;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__filter-close {
+    display: none;
+
+    @include smallTablet-and-mobile {
+      position: absolute;
+      top: 75px;
+      right: -40px;
+      padding: 12px;
+      display: inline-flex;
+      font-size: 20px;
+      background: #FFFFFF;
+
+      &-icon {
+        display: inline-flex;
+      }
+    }
+  }
+
   &__left {
     flex: 1 1 20%;
     max-width: 20%;
@@ -18,21 +47,23 @@
       top: 0;
       left: 0;
       z-index: 3;
-      padding-top: 115px;
       flex: 1 1 310px;
       max-width: 310px;
       height: 100%;
       transition: transform .6s cubic-bezier(.77, 0, .175, 1);
       background: #FFFFFF;
-      overflow: auto;
     }
 
     @include smallTablet {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% - 44px));
     }
 
     @include mobile {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% - 44px));
+    }
+
+    &.opened {
+      transform: translateX(0);
     }
   }
 
@@ -45,6 +76,15 @@
       margin-left: 0;
       flex: 1 1 100%;
       max-width: 100%;
+    }
+  }
+
+  &__filter-container {
+    @include smallTablet-and-mobile {
+      padding-top: 115px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
     }
   }
 
@@ -94,5 +134,9 @@
   &__select-filter {
     display: flex;
     justify-content: flex-end;
+
+    @include smallTablet-and-mobile {
+      justify-content: space-between;
+    }
   }
 }

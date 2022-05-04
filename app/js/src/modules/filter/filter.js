@@ -1,9 +1,9 @@
-class HeaderMenu extends Widget {
+class Filter extends Widget {
   constructor(node) {
-    super(node, 'js-header');
+    super(node, 'js-filter');
 
-    this.burgerBtn = this.queryElement('.burger');
-    this.closeBtn = document.querySelector('.js-header__close');
+    this.openFilterBtn = document.querySelector('.js-filter__open');
+    this.closeFilterBtn = this.queryElement('.close');
     this.isOpened = false;
 
     this.onOpenCloseClick = this.onOpenCloseClick.bind(this);
@@ -14,10 +14,10 @@ class HeaderMenu extends Widget {
   }
 
   build() {
-    this.burgerBtn.addEventListener('click', this.onOpenCloseClick);
-    this.closeBtn.addEventListener('click', this.onOpenCloseClick);
+    this.openFilterBtn.addEventListener('click', this.onOpenCloseClick);
+    this.closeFilterBtn.addEventListener('click', this.onOpenCloseClick);
     document.addEventListener('click', ({ target }) => {
-      if (target.closest('.js-header__aside') || target.closest('.js-header__burger')) {
+      if (target.closest('.js-filter') || target.closest('.js-filter__open')) {
         return;
       } else {
         this.closeOverlay();
@@ -42,8 +42,9 @@ class HeaderMenu extends Widget {
   }
 
   static init(el) {
-    HeaderMenu.el = new HeaderMenu(el);
+    console.log("iehjfiuhefiuh");
+    Filter.el = new Filter(el);
   }
 }
 
-window.HeaderMenu = HeaderMenu;
+window.Filter = Filter;
