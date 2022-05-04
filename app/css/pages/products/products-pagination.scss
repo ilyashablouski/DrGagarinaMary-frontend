@@ -2,4 +2,8 @@
   margin-top: 80px;
   display: flex;
   justify-content: center;
+
+  @include smallTablet-and-mobile {
+    margin-top: 40px;
+  }
 }
