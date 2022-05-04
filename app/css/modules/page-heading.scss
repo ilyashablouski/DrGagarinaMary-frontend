@@ -3,12 +3,20 @@
   background: $color-creamy-light;
   text-align: center;
 
+  @include smallTablet-and-mobile {
+    padding: 40px 0;
+  }
+
   &__title {
     font-family: var(--heading-font);
     font-size: 32px;
     text-transform: uppercase;
     line-height: 1;
     color: $color-primary;
+
+    @include smallTablet-and-mobile {
+      font-size: 30px;
+    }
   }
 
   &__breadcrumbs {
