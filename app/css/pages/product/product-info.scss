@@ -1,8 +1,18 @@
 .product-info {
   margin-top: 130px;
+
+  @include smallTablet-and-mobile {
+    margin-top: 90px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include smallTablet-and-mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__image {
@@ -10,6 +20,12 @@
     flex: 1 1 40%;
     max-width: 40%;
     border: 1px solid $color-primary;
+
+    @include smallTablet-and-mobile {
+      flex: 1 1 740px;
+      max-width: 740px;
+    }
+
     img {
       width: 100% !important;
       height: 100% !important;
@@ -21,6 +37,13 @@
     margin-left: 50px;
     flex: 1 1 calc(60% - 50px);
     max-width: calc(60% - 50px);
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+      margin-top: 60px;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 
   &__heading {
@@ -30,6 +53,10 @@
     line-height: 1.4;
     text-transform: uppercase;
     color: $color-primary;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__price {
