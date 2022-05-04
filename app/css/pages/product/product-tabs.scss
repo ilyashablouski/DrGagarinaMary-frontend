@@ -2,13 +2,14 @@
   margin-top: 80px;
 
   &__tabs {
+    margin: -15px 0 0 -35px;
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__tab {
-    &:not(:first-child) {
-      margin-left: 35px;
-    }
+    margin-left: 35px;
+    margin-top: 15px;
 
     &.active {
       background: $color-primary;
