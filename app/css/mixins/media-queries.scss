@@ -233,7 +233,7 @@
 }
 
 @mixin mobile414 {
-  @media(min-width: 414px) and (max-width: $mobileMedia) {
+  @media(max-width: 414px) {
     @content;
   }
 }
