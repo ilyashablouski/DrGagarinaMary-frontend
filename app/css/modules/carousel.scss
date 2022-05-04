@@ -10,7 +10,6 @@
   }
 
   &__row {
-
     .non-swiper-slide {
       display: none;
     }
@@ -86,9 +85,5 @@
     position: absolute;
     bottom: 0;
     @include align(true, false);
-
-    @include smallTablet-and-mobile {
-      display: none;
-    }
   }
 }

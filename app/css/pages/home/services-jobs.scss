@@ -3,6 +3,10 @@
   background: #FFFFFF;
   overflow: hidden;
 
+  @include smallTablet-and-mobile {
+    padding-top: 90px;
+  }
+
   &__heading {
     display: block;
     text-align: center;
@@ -12,6 +16,10 @@
     line-height: 1.5em;
     text-transform: uppercase;
     color: $color-primary;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__inner {
@@ -22,14 +30,24 @@
     &__tabs {
       display: flex;
       align-items: center;
+
+      @include smallTablet-and-mobile {
+        overflow: auto;
+      }
     }
 
     &__slider {
       margin-left: 120px;
+      @include smallTablet-and-mobile {
+        margin-left: 0;
+      }
     }
 
     &__wrapper {
       display: flex;
+      @include smallTablet-and-mobile {
+        flex-wrap: wrap;
+      }
     }
 
     &__slide {
@@ -43,10 +61,21 @@
   }
 
   .tabs {
+    &__inner {
+      @include smallTablet-and-mobile {
+        display: flex;
+        max-width: 1023px;
+      }
+    }
 
     &__item {
       &:not(:first-child) {
         margin-top: 10px;
+
+        @include smallTablet-and-mobile {
+          margin-top: 0;
+          margin-left: 20px;
+        }
       }
     }
 
@@ -57,6 +86,10 @@
       line-height: 150%;
       opacity: 0.4;
       @include transition(.3s);
+
+      @include mobile {
+        font-size: 25px;
+      }
 
       &:hover {
         color: $color-primary;
