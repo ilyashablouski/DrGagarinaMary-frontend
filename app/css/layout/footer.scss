@@ -5,6 +5,10 @@
 
   &__wrapper {
     padding: 118px 0;
+
+    @include smallTablet-and-mobile {
+      padding: 90px 0;
+    }
   }
 
   &__logo {
