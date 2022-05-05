@@ -37,7 +37,7 @@
     }
 
     &__slider {
-      margin-left: 120px;
+      margin-left: 90px;
       @include smallTablet-and-mobile {
         margin-left: 0;
       }
@@ -80,12 +80,23 @@
     }
 
     &__link {
-      font-size: 35px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 32px;
       font-weight: 600;
       white-space: nowrap;
       line-height: 150%;
       opacity: 0.4;
       @include transition(.3s);
+
+      &:before {
+        margin-right: 15px;
+        content: "";
+        width: 0;
+        height: 4px;
+        background: currentColor;
+        transition: width .2s ease-out .1s;
+      }
 
       @include mobile {
         font-size: 25px;
@@ -99,6 +110,10 @@
       &.active {
         color: $color-primary;
         opacity: 1;
+
+        &:before {
+          width: 45px;
+        }
       }
     }
   }
