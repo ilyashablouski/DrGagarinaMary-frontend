@@ -47,5 +47,5 @@ class Filter extends Widget {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  Filter.init(document.querySelector('.js-filter'));
+  document.querySelectorAll('.js-filter').forEach(item => Filter.init(item));
 });
