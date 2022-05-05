@@ -25,12 +25,12 @@
 
     @include smallTablet-and-mobile {
       position: absolute;
-      top: 75px;
-      right: -40px;
-      padding: 12px;
+      top: 0;
+      right: -50px;
+      padding: 15px;
       display: inline-flex;
       font-size: 20px;
-      background: #FFFFFF;
+      background: $color-secondary;
 
       &-icon {
         display: inline-flex;
@@ -46,7 +46,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 3;
+      z-index: 6;
       flex: 1 1 310px;
       max-width: 310px;
       height: 100%;
@@ -54,12 +54,8 @@
       background: #FFFFFF;
     }
 
-    @include smallTablet {
-      transform: translateX(calc(-100% - 44px));
-    }
-
-    @include mobile {
-      transform: translateX(calc(-100% - 44px));
+    @include smallTablet-and-mobile {
+      transform: translateX(calc(-100% - 50px));
     }
 
     &.opened {
@@ -81,7 +77,7 @@
 
   &__filter-container {
     @include smallTablet-and-mobile {
-      padding-top: 115px;
+      padding-top: 39px;
       width: 100%;
       height: 100%;
       overflow: auto;

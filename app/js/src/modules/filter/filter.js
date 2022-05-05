@@ -28,13 +28,13 @@ class Filter extends Widget {
   openOverlay() {
     this.isOpened = true;
     this.$node.classList.add('opened');
-    document.body.classList.add('no-scrollbar');
+    document.body.classList.add('no-scrollbar-from-filter');
   }
 
   closeOverlay() {
     this.isOpened = false;
     this.$node.classList.remove('opened');
-    document.body.classList.remove('no-scrollbar');
+    document.body.classList.remove('no-scrollbar-from-filter');
   }
 
   onOpenCloseClick() {
@@ -42,9 +42,10 @@ class Filter extends Widget {
   }
 
   static init(el) {
-    console.log("iehjfiuhefiuh");
-    Filter.el = new Filter(el);
+    new Filter(el);
   }
 }
 
-window.Filter = Filter;
+document.addEventListener('DOMContentLoaded', () => {
+  Filter.init(document.querySelector('.js-filter'));
+});

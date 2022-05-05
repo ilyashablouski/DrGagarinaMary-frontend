@@ -45,13 +45,19 @@
     will-change: backdrop-filter;
   }
 
-  &.no-scrollbar {
+  &.no-scrollbar, &.no-scrollbar-from-filter {
     overflow: hidden;
 
     &:before {
       background: rgba(0.10, 0.09, 0.08, 0.5);
       backdrop-filter: blur(2px);
       visibility: visible;
+    }
+  }
+
+  &.no-scrollbar-from-filter {
+    &:before {
+      z-index: 5;
     }
   }
 }
