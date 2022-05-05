@@ -14,7 +14,7 @@
     z-index: 4;
     padding: 0 $mobileGutter;
     min-height: 75px;
-    background: linear-gradient(0deg,#fff,#fff);
+    background: linear-gradient(0deg, #fff, #fff);
     box-shadow: 0 5px 26px rgb(1 64 139 / 14%);
   }
 
@@ -24,7 +24,7 @@
     z-index: 4;
     left: 0;
     right: 0;
-    background: linear-gradient(0deg,#fff,#fff);
+    background: linear-gradient(0deg, #fff, #fff);
     box-shadow: 0 5px 26px rgb(1 64 139 / 14%);
   }
 
@@ -37,7 +37,7 @@
   }
 
   &.opened {
-    ~.aside {
+    ~ .aside {
       transform: translateX(0);
     }
 
@@ -134,6 +134,26 @@
       &:last-child {
         bottom: 0;
         width: 15px;
+      }
+    }
+  }
+
+  &__shedule-btn {
+    @include smallTablet-and-mobile {
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      @include align(false, true);
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $color-primary;
+      &:before {
+        content: '';
+        @include align();
+        @include transition;
+        @include sprite('shedule');
+        z-index: 2;
       }
     }
   }

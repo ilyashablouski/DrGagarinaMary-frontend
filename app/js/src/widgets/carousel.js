@@ -64,6 +64,7 @@ class Carousel extends Widget {
           modifier: 3,
           slideShadows: false,
         },
+        grabCursor: true,
       });
     } else {
       this.swiper = new Swiper(this.$slider, {
