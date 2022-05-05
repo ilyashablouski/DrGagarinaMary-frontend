@@ -1,0 +1,42 @@
+.related-products {
+  margin-top: 90px;
+
+  &__heading {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 32px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+
+  &__wrapper {
+    margin: 35px 0 0 -20px;
+    display: flex;
+
+    @include smallTablet-and-mobile {
+      overflow: auto;
+    }
+  }
+
+  &__item {
+    margin-left: 20px;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+
+    @include smallTablet {
+      flex: 1 0 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+    }
+
+    @include mobile {
+      flex: 1 0 calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+
+    @include mobile414 {
+      flex: 1 0 calc(100% - 16px);
+      max-width: calc(100% - 16px);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<section class="related-products">
+  <div class="container">
+    <span class="related-products__heading">Похожие продукты</span>
+
+    <div class="related-products__wrapper">
+      {{#times 4}}
+        <div class="related-products__item">
+          {{> widgets/product-card img-src="products/product-2" label="Крем" price="40"}}
+        </div>
+      {{/times}}
+    </div>
+  </div>
+</section>
