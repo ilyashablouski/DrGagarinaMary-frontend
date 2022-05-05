@@ -76,7 +76,12 @@
   }
 
   &__filter-container {
+    position: sticky;
+    top: calc(5% + 100px);
+
     @include smallTablet-and-mobile {
+      position: relative;
+      top: auto;
       padding-top: 39px;
       width: 100%;
       height: 100%;
@@ -95,12 +100,7 @@
   }
 
   &__filter {
-    position: sticky;
-    top: calc(5% + 100px);
-
     @include smallTablet-and-mobile {
-      position: relative;
-      top: auto;
       padding: 0 20px 40px;
     }
   }
