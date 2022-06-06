@@ -2,18 +2,37 @@
   &__wrapper {
     margin-top: 120px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+
+    @include smallTablet-and-mobile {
+      margin-top: 90px;
+    }
   }
 
   &__left {
     flex: 1 1 50%;
     max-width: 50%;
+
+    @include smallTablet-and-mobile {
+      order: 2;
+      margin-top: 65px;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 
   &__right {
     margin-left: 80px;
     flex: 1 1 calc(50% - 80px);
     max-width: calc(50% - 80px);
+
+    @include smallTablet-and-mobile {
+      order: 1;
+      margin-left: 0;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -21,10 +40,18 @@
     font-size: 40px;
     text-transform: uppercase;
     color: $color-primary;
+
+    @include smallTablet-and-mobile {
+      font-size: 32px;
+    }
   }
 
   &__text {
     font-size: 18px;
+
+    @include smallTablet-and-mobile {
+      font-size: 16px;
+    }
   }
 
   &__button {

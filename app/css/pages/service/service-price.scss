@@ -1,6 +1,10 @@
 .service-price {
   margin-top: 120px;
 
+  @include smallTablet-and-mobile {
+    margin-top: 90px;
+  }
+
   &__title {
     display: block;
     text-align: center;
@@ -8,6 +12,10 @@
     font-size: 40px;
     text-transform: uppercase;
     color: $color-primary;
+
+    @include smallTablet-and-mobile {
+      font-size: 32px;
+    }
   }
 
   &__accordion {

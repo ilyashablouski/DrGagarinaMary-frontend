@@ -44,12 +44,13 @@
 
   &__price {
     margin-left: auto;
+    padding-left: 15px;
     font-weight: 500;
     color: $color-gold-dark;
   }
 
   &__button {
-    margin-left: 25px;
+    margin-left: 20px;
     display: inline-flex;
   }
 
