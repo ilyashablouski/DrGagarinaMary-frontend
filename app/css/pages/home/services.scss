@@ -54,7 +54,8 @@
       }
 
       @include mobile {
-        width: calc(100% - 20px);
+        margin-left: $mobileGutter;
+        width: calc(100% - 16px);
       }
     }
   }

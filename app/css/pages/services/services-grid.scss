@@ -1,0 +1,36 @@
+.services-grid {
+  margin-top: 130px;
+
+  @include smallTablet-and-mobile {
+    margin-top: 90px;
+  }
+
+  &__wrapper {
+    margin: -20px -10px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      margin: -16px -8px 0;
+    }
+  }
+
+  &__item {
+    margin-top: 20px;
+    padding: 0 10px;
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
+
+    @include smallTablet {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+
+    @include mobile {
+      margin-top: 16px;
+      padding: 0 8px;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+}
