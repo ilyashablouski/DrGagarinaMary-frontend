@@ -9,6 +9,15 @@
       min-height: 880px;
       width: 100vw;
       object-fit: cover;
+
+      @include mobile {
+        min-height: 980px;
+        object-fit: contain;
+      }
+
+      @include mobile414 {
+        min-height: 1040px;
+      }
     }
 
     &:before {

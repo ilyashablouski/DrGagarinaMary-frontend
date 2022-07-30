@@ -34,10 +34,10 @@
     position: absolute;
     left: 0;
     bottom: 30px;
-    padding: 25px 35px;
+    padding: 25px;
     width: 100%;
-    max-width: 345px;
-    background: $color-white;
+    background: rgb(240, 247, 251, 0.85);
+    backdrop-filter: blur(4px);
 
     &-title {
       display: block;
@@ -49,24 +49,16 @@
     &-text {
       margin-top: 5px;
       display: block;
-      font-size: 24px;
+      font-size: 20px;
       font-family: var(--heading-font);
       font-weight: var(--heading-font-weight);
       line-height: 1.4;
       text-transform: uppercase;
       color: $color-primary;
       white-space: nowrap;
+
+
     }
-
-    &--blue {
-      background: #f0f7fb;
-    }
-
-    &--orange {
-      background: #fff9f6;
-    }
-
-
   }
 
 }
