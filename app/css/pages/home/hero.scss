@@ -1,23 +1,21 @@
 .hero {
   &__background {
+    padding-top: 100px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+
+    @include smallTablet-and-mobile {
+      padding-top: 75px;
+    }
 
     img {
-      min-height: 880px;
-      width: 100vw;
-      object-fit: cover;
-
-      @include mobile {
-        min-height: 980px;
-        object-fit: contain;
-      }
-
-      @include mobile414 {
-        min-height: 1040px;
-      }
+      object-fit: contain;
+      margin-bottom: -10%;
     }
 
     &:before {
@@ -33,7 +31,6 @@
     display: flex;
     flex-direction: column;
     height: calc(100vh - 100px);
-    min-height: 450px;
     text-align: center;
 
     @include smallTablet-and-mobile {

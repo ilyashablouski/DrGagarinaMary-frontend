@@ -21,7 +21,7 @@
     flex: 1 0 auto;
     min-height: 1px;
 
-    @include tablet-and-mobile{
+    @include smallTablet-and-mobile {
       margin-top: 75px;
     }
   }
