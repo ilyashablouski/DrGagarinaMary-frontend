@@ -9,10 +9,19 @@ class Map extends Widget {
     Ymaps
       .load('https://api-maps.yandex.ru/2.1/?lang=ru_RU')
       .then(maps => {
-        new maps.Map(this.mapContainer, {
-          center: [53.902615, 27.559790],
-          zoom: 7,
+        const myMap = new maps.Map(this.mapContainer, {
+          center: [53.922851,27.625522],
+          zoom: 16,
         });
+
+        myMap.geoObjects
+          .add(new maps.Placemark([53.922851,27.625522], {
+            balloonContent: '<strong>Студия функциональной эстетики\n' +
+              'Марии Гагариной</strong>'
+          }, {
+            preset: 'islands#icon',
+            iconColor: '#191919'
+          }))
       })
       .catch(error => console.log('Failed to load Yandex Maps', error));
   }
