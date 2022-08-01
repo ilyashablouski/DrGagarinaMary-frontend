@@ -75,11 +75,16 @@
 
     @include mobile {
       font-size: 37px;
+      line-height: 1.3em;
     }
   }
 
   &__btn {
     margin-top: 40px;
+
+    @include mobile {
+      margin-top: 30px;
+    }
   }
 
   &__contacts {
