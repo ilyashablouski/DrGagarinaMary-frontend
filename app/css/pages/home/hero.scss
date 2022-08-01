@@ -50,6 +50,10 @@
     color: #fff;
     letter-spacing: 3px;
 
+    @include smallTablet-and-mobile {
+      margin-top: 30px;
+    }
+
     @include mobile {
       font-size: 16px;
     }
@@ -65,12 +69,12 @@
     color: #fff;
     line-height: 1.5em;
 
-    @include smallTablet-and-mobile {
+    @include smallTablet {
       font-size: 50px;
     }
 
     @include mobile {
-      font-size: 42px;
+      font-size: 37px;
     }
   }
 
