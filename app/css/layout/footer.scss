@@ -152,4 +152,16 @@
       }
     }
   }
+
+  &__text {
+    &-link {
+      margin-top: 10px;
+      display: block;
+      color: $color-secondary;
+
+      &:hover {
+        color: $color-secondary-hover;
+      }
+    }
+  }
 }
