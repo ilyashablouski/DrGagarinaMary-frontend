@@ -3,6 +3,11 @@ class HeaderMenu extends Widget {
     super(node, 'js-header');
 
     this.burgerBtn = this.queryElement('.burger');
+    //Delete after return yClients
+    this.bookingBtns = document.querySelectorAll('.js-booking-btn');
+    this.asideBookingContent = document.querySelector('.aside__content-booking');
+    this.asideMainContent = document.querySelector('.aside__content-main');
+    //-----------------------------------------------------------------------
     this.closeBtn = document.querySelector('.js-header__close');
     this.isOpened = false;
 
@@ -14,10 +19,29 @@ class HeaderMenu extends Widget {
   }
 
   build() {
-    this.burgerBtn.addEventListener('click', this.onOpenCloseClick);
+    //Delete after return yClients
+    this.bookingBtns.forEach((element) => {
+      element.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.asideBookingContent.style.display = 'block';
+        this.asideMainContent.style.display = 'none';
+
+        this.onOpenCloseClick();
+      });
+    });
+    //-----------------------------------------------------------------------
+    this.burgerBtn.addEventListener('click', () => {
+      //Delete after return yClients
+      this.asideBookingContent.style.display = 'none';
+      this.asideMainContent.style.display = 'block';
+      //-----------------------------------------------------------------------
+      this.onOpenCloseClick();
+    });
     this.closeBtn.addEventListener('click', this.onOpenCloseClick);
     document.addEventListener('click', ({ target }) => {
-      if (target.closest('.js-header__aside') || target.closest('.js-header__burger')) {
+      if (target.closest('.js-header__aside')
+        || target.closest('.js-header__burger')
+        || target.closest('.js-booking-btn')) {
         return;
       } else {
         this.closeOverlay();

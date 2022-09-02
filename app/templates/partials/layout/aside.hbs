@@ -3,7 +3,7 @@
     <i class="aside__close-icon">{{> ui/svg name="close-btn"}}</i>
   </button>
 
-  <div class="aside__content">
+  <div class="aside__content aside__content-main">
     <a href="home.html" class="aside__logo">
       {{>components/image img="logo" ext='png' no-2x=true}}
     </a>
@@ -37,6 +37,23 @@
       </div>
     </div>
 
+    <div class="aside__socials">
+      {{>  widgets/socials}}
+    </div>
+  </div>
+
+  <div class="aside__content aside__content-booking" style="display: none">
+    <a href="home.html" class="aside__logo">
+      {{>components/image img="logo" ext='png' no-2x=true}}
+    </a>
+
+    <i class="aside__divider"></i>
+    <p style="margin-top: 45px">Записаться на приём можно по телефону:</p>
+    <div class="aside__phone">
+      <a href="tel:+375259006852" class="aside__phone-link">+375(25)9006852</a>
+    </div>
+
+    <p style="margin-top: 15px">А также через соцсети:</p>
     <div class="aside__socials">
       {{>  widgets/socials}}
     </div>
