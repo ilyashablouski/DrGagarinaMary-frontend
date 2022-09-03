@@ -36,9 +36,30 @@
     top: 0;
   }
 
+  //Revert & uncomment when return yClients
+  //&.opened-menu {
+  //  ~ .aside {
+  //
+  //    transform: translateX(0);
+  //  }
+  //
+  //  @include smallTablet-and-mobile {
+  //    .header-menu {
+  //      transform: translateY(0);
+  //    }
+  //  }
+  //}
   &.opened {
     ~ .aside {
       transform: translateX(0);
+    }
+  }
+
+  &.opened-menu {
+    ~ .aside {
+      @include no-smallTablet {
+        transform: translateX(0);
+      }
     }
 
     @include smallTablet-and-mobile {
@@ -47,6 +68,8 @@
       }
     }
   }
+
+  //-------------------------------
 
   &__wrapper {
     position: relative;

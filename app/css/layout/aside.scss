@@ -13,7 +13,7 @@
   overflow-y: auto;
 
   @include smallTablet-and-mobile {
-    display: none;
+    width: 100vw;
   }
 
   &__logo {
