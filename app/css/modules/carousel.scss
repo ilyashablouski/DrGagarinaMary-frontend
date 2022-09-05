@@ -10,6 +10,7 @@
   }
 
   &__row {
+    position: relative;
     .non-swiper-slide {
       display: none;
     }
@@ -26,12 +27,6 @@
         display: block;
         background: #fff;
         z-index: 2;
-      }
-
-      .home-featured--background & {
-        &:before, &:after {
-          display: none;
-        }
       }
 
       &:before {
@@ -78,12 +73,5 @@
     &--next {
       right: -30px;
     }
-  }
-
-  .swiper-pagination {
-    margin-top: 10px;
-    position: absolute;
-    bottom: 0;
-    @include align(true, false);
   }
 }

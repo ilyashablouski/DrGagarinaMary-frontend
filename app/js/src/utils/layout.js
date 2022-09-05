@@ -28,8 +28,7 @@ const Layout = {
 
   isDesktopLayout: function() {
     return this.isMobileLayout() === false
-      && this.isTabletLayout() === false
-      && this.isLaptopLayout() === false;
+      && this.isTabletLayout() === false;
   },
 
   addListener: function(func) {

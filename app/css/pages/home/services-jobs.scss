@@ -38,8 +38,10 @@
 
     &__slider {
       margin-left: 90px;
+      width: 100%;
       @include smallTablet-and-mobile {
         margin-left: 0;
+        margin-top: 20px;
       }
     }
 
@@ -52,11 +54,26 @@
 
     &__slide {
       width: auto;
+
+      @include smallTablet-and-mobile {
+        width: 100%;
+      }
     }
 
     img {
       width: 652px;
       height: 680px;
+
+      @include smallTablet-and-mobile {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    @include smallTablet-and-mobile {
+      margin-top: 15px;
     }
   }
 

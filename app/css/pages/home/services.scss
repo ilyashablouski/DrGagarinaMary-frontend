@@ -37,25 +37,25 @@
 
   .carousel {
     &__slider {
-      margin-left: -20px;
-
-      @include mobile {
-        margin-left: -16px;
-      }
+      //margin-left: -20px;
+      //
+      //@include mobile {
+      //  margin-left: -16px;
+      //}
     }
 
 
     .carousel__slide {
-      margin-left: $desktopGutter;
-      width: calc(33.33% - 20px);
+      //margin-left: $desktopGutter;
+      width: calc(33.33%);
 
       @include smallTablet {
-        width: calc(50% - 20px);
+        width: calc(50%);
       }
 
       @include mobile {
-        margin-left: $mobileGutter;
-        width: calc(100% - 16px);
+        //margin-left: $mobileGutter;
+        width: calc(100%);
       }
     }
   }

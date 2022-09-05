@@ -13,7 +13,7 @@ class Carousel extends Widget {
     this.$navPrev = this.withNavigation && this.queryElement('.prev');
     this.$navNext = this.withNavigation && this.queryElement('.next');
     this.$tabs = this.queryElements('.tab');
-    // this.onLayoutChange = this.onLayoutChange.bind(this);
+    this.onLayoutChange = this.onLayoutChange.bind(this);
 
     this.init();
   }
@@ -21,33 +21,33 @@ class Carousel extends Widget {
   build() {
     this.events();
     this.default();
-
-    this.initSwiper();
-    // this.onLayoutChange();
+    this.onLayoutChange();
   }
 
 
-  // onLayoutChange() {
-  //   if (Layout.isDesktopLayout()) {
-  //     this.initDesktop();
-  //   } else {
-  //     this.initMobile();
-  //   }
-  // }
+  onLayoutChange() {
+    if (Layout.isDesktopLayout()) {
+      this.initDesktop();
+    } else {
+      this.initTablet();
+    }
+  }
 
-  // initDesktop() {
-  //   this.initSwiper();
-  // }
-  //
-  // initMobile() {
-  //   if (this.swiper) {
-  //     this.swiper.destroy(true, true);
-  //     this.swiper = null;
-  //   }
-  // }
+  initDesktop() {
+    this.initSwiper();
+  }
+
+  initTablet() {
+    if (this.swiper) {
+      this.swiper.destroy(true, true);
+      this.swiper = null;
+      this.initSwiper();
+    }
+    this.initSwiper();
+  }
 
   initSwiper() {
-    if (this.withCoverflowEffect) {
+    if (this.withCoverflowEffect && Layout.isDesktopLayout()) {
       this.swiper = new Swiper(this.$slider, {
         slidesPerView: 'auto',
         pagination: {
@@ -64,6 +64,20 @@ class Carousel extends Widget {
           modifier: 3,
           slideShadows: false,
         },
+        grabCursor: true,
+      });
+    } else if (this.withCoverflowEffect && Layout.isTabletLayout()) {
+      this.swiper = new Swiper(this.$slider, {
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: this.withNavigation ? {
+          prevEl: this.$navPrev,
+          nextEl: this.$navNext,
+        } : false,
+        loop: true,
         grabCursor: true,
       });
     } else {
