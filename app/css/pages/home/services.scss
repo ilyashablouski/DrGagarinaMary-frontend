@@ -36,17 +36,18 @@
   }
 
   .carousel {
-    &__slider {
-      //margin-left: -20px;
-      //
-      //@include mobile {
-      //  margin-left: -16px;
-      //}
+    &__row {
+      margin: 0 -10px;
+
+      @include mobile {
+        margin: 0 -8px;
+      }
     }
 
 
-    .carousel__slide {
-      //margin-left: $desktopGutter;
+    &__slide {
+      padding-left: 10px;
+      padding-right: 10px;
       width: calc(33.33%);
 
       @include smallTablet {
@@ -54,7 +55,8 @@
       }
 
       @include mobile {
-        //margin-left: $mobileGutter;
+        padding-left: 8px;
+        padding-right: 8px;
         width: calc(100%);
       }
     }

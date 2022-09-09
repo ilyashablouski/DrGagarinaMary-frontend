@@ -52,11 +52,31 @@
       }
     }
 
+    &__row {
+      @include smallTablet {
+        margin: 0 -10px;
+      }
+
+      @include mobile {
+        margin: 0 -8px;
+      }
+    }
+
     &__slide {
       width: auto;
 
       @include smallTablet-and-mobile {
         width: 100%;
+      }
+
+      @include smallTablet {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @include mobile {
+        padding-left: 8px;
+        padding-right: 8px;
       }
     }
 

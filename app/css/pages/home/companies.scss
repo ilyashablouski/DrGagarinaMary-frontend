@@ -55,19 +55,27 @@
   }
 
   .carousel {
-    margin-left: -20px;
-    @include mobile {
-      margin-left: -16px;
+    &__row {
+      margin: 0 -10px;
+
+      @include mobile {
+        margin: 0 -8px;
+      }
     }
 
-    .carousel__slide {
-      margin-left: $desktopGutter;
-      width: calc(20% - 20px);
+    &__slide {
+      padding-left: 10px;
+      padding-right: 10px;
+      width: calc(20%);
+
       @include smallTablet {
-        width: calc(25% - 20px);
+        width: calc(25%);
       }
+
       @include mobile {
-        width: calc(50% - 20px);
+        padding-left: 8px;
+        padding-right: 8px;
+        width: calc(50%);
       }
 
     }
