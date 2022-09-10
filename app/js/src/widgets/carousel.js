@@ -54,7 +54,7 @@ class Carousel extends Widget {
           el: '.swiper-pagination',
           clickable: true,
         },
-        spaceBetween: 90,
+        spaceBetween: 80,
         loop: true,
         effect: 'coverflow',
         coverflowEffect: {
